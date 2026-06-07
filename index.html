@@ -43,7 +43,8 @@
   }
   </script>
   <!-- /seo -->
-  <title>별빛연구소 | Starlight Research</title>  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <title>별빛연구소 | Starlight Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/site.css" />
@@ -153,10 +154,10 @@
     const { signs } = await loadJson('data/signs.json');
     const current = getCurrentSign(signs);
     const anim = { duration: 4, hoverEffect: true };
-    applyAnimatedText(document.getElementById('hero-name'), current.nameKo, current.color, { ..anim, size: 'hero' });
-    applyAnimatedText(document.getElementById('about-title'), '별과 빛을 연구합니다', '#6ec8c8', { ..anim, size: 'section' });
-    applyAnimatedText(document.getElementById('signs-title'), '12별자리 이야기', current.color, { ..anim, size: 'section' });
-    applyAnimatedText(document.getElementById('info-title'), '별빛 인포그래픽', '#ffd84d', { ..anim, size: 'section' });
+    applyAnimatedText(document.getElementById('hero-name'), current.nameKo, current.color, { ...anim, size: 'hero' });
+    applyAnimatedText(document.getElementById('about-title'), '별과 빛을 연구합니다', '#6ec8c8', { ...anim, size: 'section' });
+    applyAnimatedText(document.getElementById('signs-title'), '12별자리 이야기', current.color, { ...anim, size: 'section' });
+    applyAnimatedText(document.getElementById('info-title'), '별빛 인포그래픽', '#ffd84d', { ...anim, size: 'section' });
     applyBubbleText(document.getElementById('mbti-tool-title'), 'MBTI 탐구', '#6ec8c8', { size: 'tool' });
     applyBubbleText(document.getElementById('enneagram-tool-title'), '에니어그램', '#9b6ec8', { size: 'tool' });
     applyBubbleText(document.getElementById('equinox-tool-title'), '인포그래픽 지식 퀴즈', '#9b6ec8', { size: 'tool' });

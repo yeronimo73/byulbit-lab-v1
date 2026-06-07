@@ -4,9 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#0a0a0f" />
-  <title>연구 노트 | 별빛연구소</title>
-  <meta name="description" content="별빛연구소 빛·별·거울 연구 노트, 학술 근거와 탐구 실습." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!-- seo -->
+  <meta name="description" content="색과 감정, 별빛 스펙트럼, 달빛, 황도 12색 등 짧은 리서치 노트와 탐구 실습." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://byulbit-lab-v1.vercel.app/research-note.html" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://byulbit-lab-v1.vercel.app/sitemap.xml" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="별빛연구소" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="연구 노트 | 별빛연구소" />
+  <meta property="og:description" content="색과 감정, 별빛 스펙트럼, 달빛, 황도 12색 등 짧은 리서치 노트와 탐구 실습." />
+  <meta property="og:url" content="https://byulbit-lab-v1.vercel.app/research-note.html" />
+  <meta property="og:image" content="https://byulbit-lab-v1.vercel.app/assets/hero-poster.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="연구 노트 | 별빛연구소" />
+  <meta name="twitter:description" content="색과 감정, 별빛 스펙트럼, 달빛, 황도 12색 등 짧은 리서치 노트와 탐구 실습." />
+  <meta name="twitter:image" content="https://byulbit-lab-v1.vercel.app/assets/hero-poster.jpeg" />
+  <!-- /seo -->
+  <title>연구 노트 | 별빛연구소</title>  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/site.css" />
@@ -31,6 +46,7 @@
   <script type="module" src="js/bg.js"></script>
   <script type="module">
     import { loadJson } from './js/site.js?v=research-note';
+    import { applyPageSEO, articleJsonLd } from './js/seo.js';
 
     const PILLAR_COLOR = { star: '#ffd84d', light: '#6ec8c8', mirror: '#9b6ec8' };
     const id = new URLSearchParams(location.search).get('id') || 'color-emotion';
@@ -46,7 +62,17 @@
       throw new Error('note not found');
     }
 
-    document.title = `${note.title} | 별빛연구소`;
+    applyPageSEO({
+      title: `${note.title} | 별빛연구소`,
+      description: note.lead,
+      path: `/research-note.html?id=${id}`,
+      jsonLd: articleJsonLd({
+        headline: note.title,
+        description: note.lead,
+        path: `/research-note.html?id=${id}`,
+        datePublished: note.date || '2026-06-07',
+      }),
+    });
     const accent = PILLAR_COLOR[note.pillar] || '#6ec8c8';
 
     const sections = (note.sections || []).map((sec) => {

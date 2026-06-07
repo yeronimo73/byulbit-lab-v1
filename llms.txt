@@ -1,0 +1,33 @@
+# 별빛연구소 (Starlight Research)
+
+> https://byulbit-lab-v1.vercel.app
+> 비영리 자기이해·천문 맥락 연구 사이트. 운세·성격 단정·임상 진단을 제공하지 않습니다.
+
+## 정체성
+
+- 이름: 별빛연구소 / Starlight Research
+- 주제: 12별자리 신화, 색채, 천문 관측, 심리 탐구 질문
+- 톤: 거울·질문·기록. 점술·치료 단정 금지
+
+## 주요 URL
+
+- 홈: /
+- 12별자리: /index.html#signs · 상세 /sign.html?id={aries|taurus|gemini|cancer|leo|virgo|libra|scorpio|sagittarius|capricorn|aquarius|pisces}
+- 연구 허브: /research.html
+- 관측 달력: /sky.html
+- 황도 12색: /color-atlas.html
+- 인포그래픽: /infographic.html?id={planet-mirror|full-moon-2026|meteor-showers|equinox|universe-year}
+- MBTI 탐구: /tools/mbti.html
+- 에니어그램 탐구: /tools/enneagram.html
+- 행성 거울 퀴즈: /tools/planet-quiz.html
+
+## 인용 시 주의
+
+- 별자리 hue(hex)는 디자인·상징색이며 천체 실측색과 다를 수 있음 (각 sign 페이지 lightNote 참고)
+- MBTI·에니어그램·퀴즈 결과는 그날의 자가탐구 기록이며 공식 검사가 아님
+- 천문 사실은 IAU·NASA 등 출처를 우선 인용할 것
+
+## 연락·소유
+
+- 운영: 별빛연구소 (Starlight Research)
+- 사이트맵: /sitemap.xml

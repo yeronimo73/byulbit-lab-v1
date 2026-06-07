@@ -4,7 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#0a0a0f" />
-  <title>인포그래픽 | 별빛연구소</title>
+  <!-- seo -->
+  <meta name="description" content="행성 거울, 달빛 일지, 유성우, 춘분·추분, 우주 달력. 천문 맥락과 심리 질문 한 장 카드." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://byulbit-lab-v1.vercel.app/infographic.html" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://byulbit-lab-v1.vercel.app/sitemap.xml" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="별빛연구소" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="별빛 인포그래픽 | 별빛연구소" />
+  <meta property="og:description" content="행성 거울, 달빛 일지, 유성우, 춘분·추분, 우주 달력. 천문 맥락과 심리 질문 한 장 카드." />
+  <meta property="og:url" content="https://byulbit-lab-v1.vercel.app/infographic.html" />
+  <meta property="og:image" content="https://byulbit-lab-v1.vercel.app/assets/hero-poster.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="별빛 인포그래픽 | 별빛연구소" />
+  <meta name="twitter:description" content="행성 거울, 달빛 일지, 유성우, 춘분·추분, 우주 달력. 천문 맥락과 심리 질문 한 장 카드." />
+  <meta name="twitter:image" content="https://byulbit-lab-v1.vercel.app/assets/hero-poster.jpeg" />
+  <!-- /seo -->
+  <title>별빛 인포그래픽 | 별빛연구소</title>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/site.css" />
   <link rel="stylesheet" href="css/infographic-poster.css" />
@@ -26,6 +43,7 @@
     import { loadJson } from './js/site.js';
     import { renderInfographicPoster, renderInfographicLayers } from './js/infographic-poster.js';
     import { renderPlanetMirrorInfographic } from './js/planet-mirror-infographic.js';
+    import { applyPageSEO, articleJsonLd } from './js/seo.js';
 
     const bodies = {
       'full-moon-2026': '<p>「달빛 일지」는 보름달을 <strong>감정의 밝기</strong>로 읽는 탐구 카드입니다. 하늘의 달 위상과 황도 구간을 짝지어, 그날 스스로에게 묻는 심리 질문을 덧붙였습니다.</p>',
@@ -44,7 +62,17 @@
     ]);
     const item = items.find((i) => i.id === id) || items[0];
     const quiz = quizzes.find((q) => q.infographicId === item.id);
-    document.title = `${item.title} | 별빛연구소`;
+    applyPageSEO({
+      title: `${item.title} | 별빛연구소`,
+      description: item.teaser,
+      path: `/infographic.html?id=${item.id}`,
+      jsonLd: articleJsonLd({
+        headline: item.title,
+        description: item.teaser,
+        path: `/infographic.html?id=${item.id}`,
+        datePublished: item.date || '2026-06-07',
+      }),
+    });
 
     if (item.type === 'planet-mirror' || item.id === 'planet-mirror') {
       const pmDetail = details['planet-mirror'];

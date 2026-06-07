@@ -4,7 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#0a0a0f" />
-  <title>별자리 이야기 | 별빛연구소</title>
+  <!-- seo -->
+  <meta name="description" content="황도 12별자리 신화, 심리 질문, 하늘 관측, 색 이야기. 별빛연구소 별자리 상세." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://byulbit-lab-v1.vercel.app/sign.html" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://byulbit-lab-v1.vercel.app/sitemap.xml" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="별빛연구소" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="12별자리 이야기 | 별빛연구소" />
+  <meta property="og:description" content="황도 12별자리 신화, 심리 질문, 하늘 관측, 색 이야기. 별빛연구소 별자리 상세." />
+  <meta property="og:url" content="https://byulbit-lab-v1.vercel.app/sign.html" />
+  <meta property="og:image" content="https://byulbit-lab-v1.vercel.app/assets/hero-poster.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="12별자리 이야기 | 별빛연구소" />
+  <meta name="twitter:description" content="황도 12별자리 신화, 심리 질문, 하늘 관측, 색 이야기. 별빛연구소 별자리 상세." />
+  <meta name="twitter:image" content="https://byulbit-lab-v1.vercel.app/assets/hero-poster.jpeg" />
+  <!-- /seo -->
+  <title>12별자리 이야기 | 별빛연구소</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=IBM+Plex+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -31,6 +48,7 @@
   <script type="module">
     import { loadJson } from './js/site.js';
     import { signSymbolMarkup } from './js/sign-icons.js';
+    import { applyPageSEO, articleJsonLd } from './js/seo.js';
 
     const id = new URLSearchParams(location.search).get('id');
     const { signs } = await loadJson('data/signs.json');
@@ -66,7 +84,17 @@
       <p class="sign-color-note" style="--sign-color:${sign.color}">${sign.colorPsych}</p>
     ` : '');
 
-    document.title = `${sign.nameKo} | 별빛연구소`;
+    applyPageSEO({
+      title: `${sign.nameKo} | 별빛연구소`,
+      description: sign.summary,
+      path: `/sign.html?id=${sign.id}`,
+      jsonLd: articleJsonLd({
+        headline: `${sign.nameKo} (${sign.nameEn})`,
+        description: sign.summary,
+        path: `/sign.html?id=${sign.id}`,
+        datePublished: '2026-06-07',
+      }),
+    });
     document.getElementById('content').innerHTML = `
       <p class="section-label">Zodiac Story</p>
       <div class="sign-symbol-hero" aria-hidden="true">

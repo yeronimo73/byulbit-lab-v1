@@ -1,0 +1,9 @@
+{
+  "url": "https://byulbit-lab-v1.vercel.app",
+  "name": "별빛연구소",
+  "nameEn": "Starlight Research",
+  "locale": "ko_KR",
+  "defaultDescription": "12별자리 신화·색채·천문 이야기와 MBTI·에니어그램·행성 거울 탐구. 운세가 아닌 자기이해 비영리 연구 공간.",
+  "ogImage": "/assets/hero-poster.jpeg",
+  "disclaimer": "비공식 자가탐구·연구 콘텐츠이며 임상 진단·점술을 대체하지 않습니다."
+}

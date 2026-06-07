@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0f" />
+  <title>2026 관측 달력 | 별빛연구소</title>
+  <meta name="description" content="2026년 월별 보름달, 유성우, 춘분·추분·하지·동지, 천문 사실 기반 관측 달력." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <div id="star-canvas" aria-hidden="true"></div>
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="shell header-row">
+      <a class="brand" href="index.html">별빛<span>연구소</span></a>
+      <a class="btn btn-ghost" href="research.html" style="min-height:2.25rem;font-size:0.75rem;">← 연구 허브</a>
+    </div>
+  </header>
+
+  <main class="shell tool-page research-page" id="sky-root">
+    <p class="section-label">Sky Calendar 2026</p>
+    <h1 class="research-title">2026 관측 달력</h1>
+    <p class="section-lead" id="sky-lead">월별 보름달·유성우·분점·황도 구간. 천문 역법 기반이며 운세와는 별개입니다.</p>
+    <p class="research-bib-note" id="sky-updated"></p>
+    <div class="sky-calendar-grid" id="sky-calendar-grid"></div>
+    <p style="margin-top:1.5rem;"><a class="btn btn-ghost" href="research.html">연구 허브로</a></p>
+    <p class="disclaimer">별빛연구소 · 비영리 천체·심리 연구 · 관측 일정은 지역·날씨에 따라 달라질 수 있습니다.</p>
+  </main>
+
+  <script type="importmap">
+  { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }
+  </script>
+  <script type="module" src="js/bg.js"></script>
+  <script type="module">
+    import { loadJson } from './js/site.js?v=sky';
+    import { getSkyCalendarEntry } from './js/scoring.js';
+
+    const TYPE_LABEL = {
+      meteor: '유성우',
+      moon: '달',
+      sun: '태양',
+      zodiac: '황도',
+      note: '메모',
+    };
+
+    const { updated, entries } = await loadJson('data/sky-calendar.json');
+    const now = new Date();
+    const current = getSkyCalendarEntry(entries, now);
+
+    document.getElementById('sky-updated').textContent = updated
+      ? `데이터 갱신: ${updated}`
+      : '';
+
+    const grid = document.getElementById('sky-calendar-grid');
+    grid.innerHTML = entries
+      .sort((a, b) => a.month - b.month)
+      .map((month) => {
+        const isCurrent =
+          month.year === now.getFullYear() && month.month === now.getMonth() + 1;
+        const highlights = (month.highlights || [])
+          .map((h) => {
+            const title = h.link
+              ? `<a href="${h.link}">${h.title}</a>`
+              : h.title;
+            const type = TYPE_LABEL[h.type] || h.type || '';
+            return `
+              <li class="sky-cal-highlight">
+                <span class="sky-cal-when">${h.when}</span>
+                <span class="sky-cal-type" data-type="${h.type || 'note'}">${type}</span>
+                <span class="sky-cal-title">${title}</span>
+                ${h.note ? `<span class="sky-cal-note">${h.note}</span>` : ''}
+              </li>`;
+          })
+          .join('');
+
+        return `
+          <article class="sky-cal-month${isCurrent ? ' sky-cal-month--current' : ''}" id="month-${month.month}">
+            <header class="sky-cal-month__head">
+              <h2>${month.month}월</h2>
+              ${isCurrent ? '<span class="sky-cal-badge">이번 달</span>' : ''}
+            </header>
+            <p class="sky-cal-month__lead">${month.lead}</p>
+            <ul class="sky-cal-month__list">${highlights || '<li class="sky-cal-note">등록된 하이라이트 없음</li>'}</ul>
+          </article>`;
+      })
+      .join('');
+
+    if (current) {
+      const el = document.getElementById(`month-${current.month}`);
+      el?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  </script>
+</body>
+</html>

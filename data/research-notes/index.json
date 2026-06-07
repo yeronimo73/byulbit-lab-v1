@@ -1,0 +1,37 @@
+{
+  "updated": "2026-06-07",
+  "notes": [
+    {
+      "id": "color-emotion",
+      "title": "색은 감정을 바꾸는가?",
+      "pillar": "light",
+      "pillarLabel": "빛 · 색채",
+      "date": "2026-06-07",
+      "teaser": "128년 색과 감정 연구가 말하는 것과 말하지 않는 것. 연상 ≠ 체감, Color-in-Context."
+    },
+    {
+      "id": "stellar-color",
+      "title": "별빛의 색, 스펙트럼",
+      "pillar": "star",
+      "pillarLabel": "별 · 천문",
+      "date": "2026-06-07",
+      "teaser": "표면온도와 겉보기 색, 레굴루스·알데바란. 천문 사실과 사이트 hue의 층위 분리."
+    },
+    {
+      "id": "moonlight",
+      "title": "달빛과 명도",
+      "pillar": "light",
+      "pillarLabel": "빛 · 색채",
+      "date": "2026-06-07",
+      "teaser": "반사광·위상·보름달. 명도 체감과 감정 비유 분리, 달빛 일지 연결."
+    },
+    {
+      "id": "zodiac-hues",
+      "title": "황도 12색 디자인 노트",
+      "pillar": "light",
+      "pillarLabel": "빛 · 색채",
+      "date": "2026-06-07",
+      "teaser": "원소·가독성·천문색 vs 디자인 hue. color-atlas와 sign 빛·색채 연동."
+    }
+  ]
+}

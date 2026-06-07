@@ -1,0 +1,191 @@
+/* Knowledge quiz × infographic panels */
+.quiz-intro-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.85rem;
+  padding: 1.15rem;
+  border-top: 3px solid var(--quiz-accent, var(--violet));
+}
+.quiz-intro-card__thumb {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.55rem;
+  margin-bottom: 0.85rem;
+  border: 1px solid var(--border);
+}
+.quiz-intro-card__poster .info-poster--compact { margin: 0; }
+.quiz-intro-card__teaser {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: rgba(244, 242, 250, 0.88);
+  margin-top: 0.75rem;
+}
+
+.quiz-section-panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.85rem;
+  padding: 1.15rem;
+  border-left: 3px solid var(--quiz-accent, var(--violet));
+}
+.quiz-section-panel__thumb {
+  width: 100%;
+  max-height: 120px;
+  object-fit: cover;
+  border-radius: 0.45rem;
+  margin-bottom: 0.75rem;
+  opacity: 0.92;
+}
+.quiz-section-panel__label {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  margin-bottom: 0.65rem;
+}
+.quiz-section-panel__sky,
+.quiz-section-panel__zodiac {
+  font-size: 0.85rem;
+  line-height: 1.55;
+  margin-bottom: 0.45rem;
+}
+.quiz-section-panel__sky span,
+.quiz-section-panel__zodiac span {
+  display: inline-block;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: var(--quiz-accent, var(--teal));
+  margin-right: 0.35rem;
+}
+.quiz-section-panel__hint {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: 0.65rem 0 1rem;
+}
+
+.q-card--with-visual { display: grid; gap: 0.65rem; }
+.quiz-visual {
+  margin: 0;
+  border-radius: 0.55rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.quiz-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.quiz-visual__caption {
+  font-size: 0.72rem;
+  color: var(--muted);
+  padding: 0.45rem 0.65rem;
+  background: rgba(255, 255, 255, 0.03);
+  margin: 0;
+}
+
+.quiz-context-chip {
+  display: inline-block;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.quiz-result-embed {
+  padding: 1rem;
+  border-radius: 0.65rem;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+}
+.quiz-result-embed__thumb {
+  width: 100%;
+  max-height: 140px;
+  object-fit: cover;
+  border-radius: 0.45rem;
+  margin-bottom: 0.5rem;
+}
+
+.knowledge-hub-grid {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+@media (min-width: 600px) {
+  .knowledge-hub-grid { grid-template-columns: 1fr 1fr; }
+}
+.knowledge-hub-card {
+  display: block;
+  padding: 1.1rem;
+  border-radius: 0.85rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.knowledge-hub-card:hover {
+  border-color: rgba(155, 110, 200, 0.4);
+  transform: translateY(-2px);
+}
+.knowledge-hub-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  margin: 0.35rem 0 0.25rem;
+}
+.knowledge-hub-card p {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0;
+}
+.knowledge-hub-card__badge {
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  color: var(--teal);
+}
+
+.info-card .card-period {
+  color: var(--ivory-muted);
+}
+.info-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.65rem;
+}
+.info-card__quiz {
+  font-size: 0.72rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 0.35rem;
+  border: 1px solid rgba(240, 235, 224, 0.22);
+  color: color-mix(in srgb, var(--ivory) 88%, transparent);
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+.info-card__quiz:hover {
+  color: var(--ivory-bright);
+  border-color: rgba(240, 235, 224, 0.38);
+  background: rgba(240, 235, 224, 0.08);
+}
+.info-card__main {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+.info-card__actions .card-more {
+  font-size: 0.72rem;
+  color: color-mix(in srgb, var(--ivory) 88%, transparent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.info-card__actions .card-more:hover {
+  color: var(--ivory-bright);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .knowledge-hub-card:hover { transform: none; }
+}

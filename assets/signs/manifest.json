@@ -1,0 +1,517 @@
+{
+  "project": "byulbit-lab-v1",
+  "updated": "2026-06-07",
+  "folders": {
+    "web_served": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web",
+    "originals_png": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/originals",
+    "export_bundle": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs"
+  },
+  "note": "web/ = 브라우저 로드. originals/ = PNG 원본. export_bundle = Finder 번들.",
+  "retention_policy": "원본 PNG 삭제·덮어쓰기 금지. WebP는 web/에만 추가.",
+  "items": [
+    {
+      "id": "aries",
+      "nameKo": "양자리",
+      "web": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/aries-hero.webp",
+          "bytes": 50794,
+          "exists": true
+        },
+        "thumb": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/aries-thumb.webp",
+          "bytes": 10406,
+          "exists": true
+        },
+        "served_hero": "assets/signs/web/aries-hero.webp",
+        "served_thumb": "assets/signs/web/aries-thumb.webp"
+      },
+      "original_png": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/originals/aries-hero.png",
+          "bytes": 1005755,
+          "exists": true
+        }
+      },
+      "export_bundle": {
+        "hero_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/aries-hero.webp",
+          "bytes": 50794,
+          "exists": true
+        },
+        "thumb_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/aries-thumb.webp",
+          "bytes": 10406,
+          "exists": true
+        },
+        "hero_png": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/aries-hero.png",
+          "bytes": 1005755,
+          "exists": true
+        }
+      }
+    },
+    {
+      "id": "taurus",
+      "nameKo": "황소자리",
+      "web": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/taurus-hero.webp",
+          "bytes": 43510,
+          "exists": true
+        },
+        "thumb": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/taurus-thumb.webp",
+          "bytes": 12146,
+          "exists": true
+        },
+        "served_hero": "assets/signs/web/taurus-hero.webp",
+        "served_thumb": "assets/signs/web/taurus-thumb.webp"
+      },
+      "original_png": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/originals/taurus-hero.png",
+          "bytes": 799449,
+          "exists": true
+        }
+      },
+      "export_bundle": {
+        "hero_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/taurus-hero.webp",
+          "bytes": 43510,
+          "exists": true
+        },
+        "thumb_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/taurus-thumb.webp",
+          "bytes": 12146,
+          "exists": true
+        },
+        "hero_png": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/taurus-hero.png",
+          "bytes": 799449,
+          "exists": true
+        }
+      }
+    },
+    {
+      "id": "gemini",
+      "nameKo": "쌍둥이자리",
+      "web": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/gemini-hero.webp",
+          "bytes": 55812,
+          "exists": true
+        },
+        "thumb": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/gemini-thumb.webp",
+          "bytes": 15232,
+          "exists": true
+        },
+        "served_hero": "assets/signs/web/gemini-hero.webp",
+        "served_thumb": "assets/signs/web/gemini-thumb.webp"
+      },
+      "original_png": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/originals/gemini-hero.png",
+          "bytes": 794570,
+          "exists": true
+        }
+      },
+      "export_bundle": {
+        "hero_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/gemini-hero.webp",
+          "bytes": 55812,
+          "exists": true
+        },
+        "thumb_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/gemini-thumb.webp",
+          "bytes": 15232,
+          "exists": true
+        },
+        "hero_png": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/gemini-hero.png",
+          "bytes": 794570,
+          "exists": true
+        }
+      }
+    },
+    {
+      "id": "cancer",
+      "nameKo": "게자리",
+      "web": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/cancer-hero.webp",
+          "bytes": 44390,
+          "exists": true
+        },
+        "thumb": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/cancer-thumb.webp",
+          "bytes": 13056,
+          "exists": true
+        },
+        "served_hero": "assets/signs/web/cancer-hero.webp",
+        "served_thumb": "assets/signs/web/cancer-thumb.webp"
+      },
+      "original_png": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/originals/cancer-hero.png",
+          "bytes": 630284,
+          "exists": true
+        }
+      },
+      "export_bundle": {
+        "hero_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/cancer-hero.webp",
+          "bytes": 44390,
+          "exists": true
+        },
+        "thumb_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/cancer-thumb.webp",
+          "bytes": 13056,
+          "exists": true
+        },
+        "hero_png": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/cancer-hero.png",
+          "bytes": 630284,
+          "exists": true
+        }
+      }
+    },
+    {
+      "id": "leo",
+      "nameKo": "사자자리",
+      "web": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/leo-hero.webp",
+          "bytes": 47860,
+          "exists": true
+        },
+        "thumb": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/leo-thumb.webp",
+          "bytes": 12466,
+          "exists": true
+        },
+        "served_hero": "assets/signs/web/leo-hero.webp",
+        "served_thumb": "assets/signs/web/leo-thumb.webp"
+      },
+      "original_png": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/originals/leo-hero.png",
+          "bytes": 778245,
+          "exists": true
+        }
+      },
+      "export_bundle": {
+        "hero_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/leo-hero.webp",
+          "bytes": 47860,
+          "exists": true
+        },
+        "thumb_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/leo-thumb.webp",
+          "bytes": 12466,
+          "exists": true
+        },
+        "hero_png": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/leo-hero.png",
+          "bytes": 778245,
+          "exists": true
+        }
+      }
+    },
+    {
+      "id": "virgo",
+      "nameKo": "처녀자리",
+      "web": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/virgo-hero.webp",
+          "bytes": 65948,
+          "exists": true
+        },
+        "thumb": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/virgo-thumb.webp",
+          "bytes": 12844,
+          "exists": true
+        },
+        "served_hero": "assets/signs/web/virgo-hero.webp",
+        "served_thumb": "assets/signs/web/virgo-thumb.webp"
+      },
+      "original_png": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/originals/virgo-hero.png",
+          "bytes": 1021189,
+          "exists": true
+        }
+      },
+      "export_bundle": {
+        "hero_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/virgo-hero.webp",
+          "bytes": 65948,
+          "exists": true
+        },
+        "thumb_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/virgo-thumb.webp",
+          "bytes": 12844,
+          "exists": true
+        },
+        "hero_png": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/virgo-hero.png",
+          "bytes": 1021189,
+          "exists": true
+        }
+      }
+    },
+    {
+      "id": "libra",
+      "nameKo": "천칭자리",
+      "web": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/libra-hero.webp",
+          "bytes": 54464,
+          "exists": true
+        },
+        "thumb": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/libra-thumb.webp",
+          "bytes": 12820,
+          "exists": true
+        },
+        "served_hero": "assets/signs/web/libra-hero.webp",
+        "served_thumb": "assets/signs/web/libra-thumb.webp"
+      },
+      "original_png": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/originals/libra-hero.png",
+          "bytes": 985123,
+          "exists": true
+        }
+      },
+      "export_bundle": {
+        "hero_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/libra-hero.webp",
+          "bytes": 54464,
+          "exists": true
+        },
+        "thumb_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/libra-thumb.webp",
+          "bytes": 12820,
+          "exists": true
+        },
+        "hero_png": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/libra-hero.png",
+          "bytes": 985123,
+          "exists": true
+        }
+      }
+    },
+    {
+      "id": "scorpio",
+      "nameKo": "전갈자리",
+      "web": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/scorpio-hero.webp",
+          "bytes": 37598,
+          "exists": true
+        },
+        "thumb": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/scorpio-thumb.webp",
+          "bytes": 10392,
+          "exists": true
+        },
+        "served_hero": "assets/signs/web/scorpio-hero.webp",
+        "served_thumb": "assets/signs/web/scorpio-thumb.webp"
+      },
+      "original_png": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/originals/scorpio-hero.png",
+          "bytes": 783163,
+          "exists": true
+        }
+      },
+      "export_bundle": {
+        "hero_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/scorpio-hero.webp",
+          "bytes": 37598,
+          "exists": true
+        },
+        "thumb_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/scorpio-thumb.webp",
+          "bytes": 10392,
+          "exists": true
+        },
+        "hero_png": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/scorpio-hero.png",
+          "bytes": 783163,
+          "exists": true
+        }
+      }
+    },
+    {
+      "id": "sagittarius",
+      "nameKo": "사수자리",
+      "web": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/sagittarius-hero.webp",
+          "bytes": 108712,
+          "exists": true
+        },
+        "thumb": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/sagittarius-thumb.webp",
+          "bytes": 24616,
+          "exists": true
+        },
+        "served_hero": "assets/signs/web/sagittarius-hero.webp",
+        "served_thumb": "assets/signs/web/sagittarius-thumb.webp"
+      },
+      "original_png": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/originals/sagittarius-hero.png",
+          "bytes": 1232049,
+          "exists": true
+        }
+      },
+      "export_bundle": {
+        "hero_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/sagittarius-hero.webp",
+          "bytes": 108712,
+          "exists": true
+        },
+        "thumb_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/sagittarius-thumb.webp",
+          "bytes": 24616,
+          "exists": true
+        },
+        "hero_png": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/sagittarius-hero.png",
+          "bytes": 1232049,
+          "exists": true
+        }
+      }
+    },
+    {
+      "id": "capricorn",
+      "nameKo": "염소자리",
+      "web": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/capricorn-hero.webp",
+          "bytes": 60426,
+          "exists": true
+        },
+        "thumb": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/capricorn-thumb.webp",
+          "bytes": 14460,
+          "exists": true
+        },
+        "served_hero": "assets/signs/web/capricorn-hero.webp",
+        "served_thumb": "assets/signs/web/capricorn-thumb.webp"
+      },
+      "original_png": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/originals/capricorn-hero.png",
+          "bytes": 1002022,
+          "exists": true
+        }
+      },
+      "export_bundle": {
+        "hero_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/capricorn-hero.webp",
+          "bytes": 60426,
+          "exists": true
+        },
+        "thumb_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/capricorn-thumb.webp",
+          "bytes": 14460,
+          "exists": true
+        },
+        "hero_png": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/capricorn-hero.png",
+          "bytes": 1002022,
+          "exists": true
+        }
+      }
+    },
+    {
+      "id": "aquarius",
+      "nameKo": "물병자리",
+      "web": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/aquarius-hero.webp",
+          "bytes": 63368,
+          "exists": true
+        },
+        "thumb": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/aquarius-thumb.webp",
+          "bytes": 19630,
+          "exists": true
+        },
+        "served_hero": "assets/signs/web/aquarius-hero.webp",
+        "served_thumb": "assets/signs/web/aquarius-thumb.webp"
+      },
+      "original_png": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/originals/aquarius-hero.png",
+          "bytes": 1062168,
+          "exists": true
+        }
+      },
+      "export_bundle": {
+        "hero_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/aquarius-hero.webp",
+          "bytes": 63368,
+          "exists": true
+        },
+        "thumb_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/aquarius-thumb.webp",
+          "bytes": 19630,
+          "exists": true
+        },
+        "hero_png": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/aquarius-hero.png",
+          "bytes": 1062168,
+          "exists": true
+        }
+      }
+    },
+    {
+      "id": "pisces",
+      "nameKo": "물고기자리",
+      "web": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/pisces-hero.webp",
+          "bytes": 41940,
+          "exists": true
+        },
+        "thumb": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/web/pisces-thumb.webp",
+          "bytes": 12214,
+          "exists": true
+        },
+        "served_hero": "assets/signs/web/pisces-hero.webp",
+        "served_thumb": "assets/signs/web/pisces-thumb.webp"
+      },
+      "original_png": {
+        "hero": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/signs/originals/pisces-hero.png",
+          "bytes": 667290,
+          "exists": true
+        }
+      },
+      "export_bundle": {
+        "hero_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/pisces-hero.webp",
+          "bytes": 41940,
+          "exists": true
+        },
+        "thumb_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/pisces-thumb.webp",
+          "bytes": 12214,
+          "exists": true
+        },
+        "hero_png": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-signs/pisces-hero.png",
+          "bytes": 667290,
+          "exists": true
+        }
+      }
+    }
+  ]
+}

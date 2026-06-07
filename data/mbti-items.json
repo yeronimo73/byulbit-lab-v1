@@ -1,0 +1,341 @@
+{
+  "disclaimer": "별빛연구소 자기이해용 비공식 탐구 도구입니다. MBTI®와 무관합니다.",
+  "items": [
+    {
+      "id": 1,
+      "text": "사람들과 함께 있을 때 에너지가 살아난다",
+      "axis": "EI",
+      "pole": "E",
+      "reverse": false
+    },
+    {
+      "id": 2,
+      "text": "혼자만의 시간이 회복에 필요하다",
+      "axis": "EI",
+      "pole": "I",
+      "reverse": false
+    },
+    {
+      "id": 3,
+      "text": "모임에서 먼저 말을 거는 편이다",
+      "axis": "EI",
+      "pole": "E",
+      "reverse": false
+    },
+    {
+      "id": 4,
+      "text": "깊은 대화는 소수와 나누는 편이 편하다",
+      "axis": "EI",
+      "pole": "I",
+      "reverse": false
+    },
+    {
+      "id": 5,
+      "text": "생각을 말로 꺼내며 정리된다",
+      "axis": "EI",
+      "pole": "E",
+      "reverse": false
+    },
+    {
+      "id": 6,
+      "text": "생각은 먼저 안에서 익힌 뒤 말한다",
+      "axis": "EI",
+      "pole": "I",
+      "reverse": false
+    },
+    {
+      "id": 7,
+      "text": "활동적인 일정이 나를 자극한다",
+      "axis": "EI",
+      "pole": "E",
+      "reverse": false
+    },
+    {
+      "id": 8,
+      "text": "조용한 환경에서 집중이 잘 된다",
+      "axis": "EI",
+      "pole": "I",
+      "reverse": false
+    },
+    {
+      "id": 9,
+      "text": "새로운 사람을 만나는 것이 즐겁다",
+      "axis": "EI",
+      "pole": "E",
+      "reverse": false
+    },
+    {
+      "id": 10,
+      "text": "익숙한 소수의 관계가 편하다",
+      "axis": "EI",
+      "pole": "I",
+      "reverse": false
+    },
+    {
+      "id": 11,
+      "text": "즉흥적인 약속에 잘 응한다",
+      "axis": "EI",
+      "pole": "E",
+      "reverse": false
+    },
+    {
+      "id": 12,
+      "text": "혼자 계획한 시간을 지키려 한다",
+      "axis": "EI",
+      "pole": "I",
+      "reverse": false
+    },
+    {
+      "id": 13,
+      "text": "구체적인 사실과 경험을 신뢰한다",
+      "axis": "SN",
+      "pole": "S",
+      "reverse": false
+    },
+    {
+      "id": 14,
+      "text": "패턴과 가능성을 먼저 본다",
+      "axis": "SN",
+      "pole": "N",
+      "reverse": false
+    },
+    {
+      "id": 15,
+      "text": "지금 당장 할 수 있는 방법을 찾는다",
+      "axis": "SN",
+      "pole": "S",
+      "reverse": false
+    },
+    {
+      "id": 16,
+      "text": "장기적인 그림을 그리는 편이다",
+      "axis": "SN",
+      "pole": "N",
+      "reverse": false
+    },
+    {
+      "id": 17,
+      "text": "설명은 단계별로 듣는 것이 이해에 도움이 된다",
+      "axis": "SN",
+      "pole": "S",
+      "reverse": false
+    },
+    {
+      "id": 18,
+      "text": "은유와 상징으로 의미를 파악한다",
+      "axis": "SN",
+      "pole": "N",
+      "reverse": false
+    },
+    {
+      "id": 19,
+      "text": "검증된 방식을 선호한다",
+      "axis": "SN",
+      "pole": "S",
+      "reverse": false
+    },
+    {
+      "id": 20,
+      "text": "새로운 아이디어를 시도하는 것이 좋다",
+      "axis": "SN",
+      "pole": "N",
+      "reverse": false
+    },
+    {
+      "id": 21,
+      "text": "세부 사항을 놓치지 않으려 한다",
+      "axis": "SN",
+      "pole": "S",
+      "reverse": false
+    },
+    {
+      "id": 22,
+      "text": "큰 흐름을 먼저 파악한다",
+      "axis": "SN",
+      "pole": "N",
+      "reverse": false
+    },
+    {
+      "id": 23,
+      "text": "실용적인 결과를 중시한다",
+      "axis": "SN",
+      "pole": "S",
+      "reverse": false
+    },
+    {
+      "id": 24,
+      "text": "이론과 개념 탐구가 흥미롭다",
+      "axis": "SN",
+      "pole": "N",
+      "reverse": false
+    },
+    {
+      "id": 25,
+      "text": "결정할 때 논리와 일관성을 우선한다",
+      "axis": "TF",
+      "pole": "T",
+      "reverse": false
+    },
+    {
+      "id": 26,
+      "text": "결정할 때 사람의 감정을 우선한다",
+      "axis": "TF",
+      "pole": "F",
+      "reverse": false
+    },
+    {
+      "id": 27,
+      "text": "비판은 문제 해결을 위한 도구다",
+      "axis": "TF",
+      "pole": "T",
+      "reverse": false
+    },
+    {
+      "id": 28,
+      "text": "비판은 관계에 상처가 될 수 있다",
+      "axis": "TF",
+      "pole": "F",
+      "reverse": false
+    },
+    {
+      "id": 29,
+      "text": "원칙이 타협보다 중요할 때가 많다",
+      "axis": "TF",
+      "pole": "T",
+      "reverse": false
+    },
+    {
+      "id": 30,
+      "text": "상황과 사람에 맞게 유연하게 한다",
+      "axis": "TF",
+      "pole": "F",
+      "reverse": false
+    },
+    {
+      "id": 31,
+      "text": "객관적 기준이 공정하다고 느낀다",
+      "axis": "TF",
+      "pole": "T",
+      "reverse": false
+    },
+    {
+      "id": 32,
+      "text": "공감이 공정함의 일부라고 느낀다",
+      "axis": "TF",
+      "pole": "F",
+      "reverse": false
+    },
+    {
+      "id": 33,
+      "text": "토론에서 진실을 찾는 것이 목표다",
+      "axis": "TF",
+      "pole": "T",
+      "reverse": false
+    },
+    {
+      "id": 34,
+      "text": "토론에서 화합을 찾는 것이 목표다",
+      "axis": "TF",
+      "pole": "F",
+      "reverse": false
+    },
+    {
+      "id": 35,
+      "text": "감정보다 사실을 먼저 말하는 편이다",
+      "axis": "TF",
+      "pole": "T",
+      "reverse": false
+    },
+    {
+      "id": 36,
+      "text": "사실보다 감정을 먼저 돌보는 편이다",
+      "axis": "TF",
+      "pole": "F",
+      "reverse": false
+    },
+    {
+      "id": 37,
+      "text": "일정과 계획이 있으면 마음이 편하다",
+      "axis": "JP",
+      "pole": "J",
+      "reverse": false
+    },
+    {
+      "id": 38,
+      "text": "상황에 맞게 유연하게 바꾸는 편이다",
+      "axis": "JP",
+      "pole": "P",
+      "reverse": false
+    },
+    {
+      "id": 39,
+      "text": "마감 전에 일을 끝내려 한다",
+      "axis": "JP",
+      "pole": "J",
+      "reverse": false
+    },
+    {
+      "id": 40,
+      "text": "마감 직전에 집중이 잘 된다",
+      "axis": "JP",
+      "pole": "P",
+      "reverse": false
+    },
+    {
+      "id": 41,
+      "text": "정리된 환경에서 일이 잘 된다",
+      "axis": "JP",
+      "pole": "J",
+      "reverse": false
+    },
+    {
+      "id": 42,
+      "text": "자유로운 환경에서 아이디어가 난다",
+      "axis": "JP",
+      "pole": "P",
+      "reverse": false
+    },
+    {
+      "id": 43,
+      "text": "결정을 빨리 내리는 편이다",
+      "axis": "JP",
+      "pole": "J",
+      "reverse": false
+    },
+    {
+      "id": 44,
+      "text": "선택지를 열어 두는 편이다",
+      "axis": "JP",
+      "pole": "P",
+      "reverse": false
+    },
+    {
+      "id": 45,
+      "text": "체크리스트를 활용한다",
+      "axis": "JP",
+      "pole": "J",
+      "reverse": false
+    },
+    {
+      "id": 46,
+      "text": "즉흥적으로 흐름을 따른다",
+      "axis": "JP",
+      "pole": "P",
+      "reverse": false
+    },
+    {
+      "id": 47,
+      "text": "예측 가능한 루틴이 좋다",
+      "axis": "JP",
+      "pole": "J",
+      "reverse": false
+    },
+    {
+      "id": 48,
+      "text": "새로운 변수가 오히려 자극이 된다",
+      "axis": "JP",
+      "pole": "P",
+      "reverse": false
+    }
+  ]
+}

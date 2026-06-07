@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0f" />
+  <title>연구 노트 | 별빛연구소</title>
+  <meta name="description" content="별빛연구소 빛·별·거울 연구 노트, 학술 근거와 탐구 실습." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <div id="star-canvas" aria-hidden="true"></div>
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="shell header-row">
+      <a class="brand" href="index.html">별빛<span>연구소</span></a>
+      <a class="btn btn-ghost" href="research.html" style="min-height:2.25rem;font-size:0.75rem;">← 연구 허브</a>
+    </div>
+  </header>
+
+  <main class="shell tool-page research-page sign-detail" id="note-root"></main>
+
+  <script type="importmap">
+  { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }
+  </script>
+  <script type="module" src="js/bg.js"></script>
+  <script type="module">
+    import { loadJson } from './js/site.js?v=research-note';
+
+    const PILLAR_COLOR = { star: '#ffd84d', light: '#6ec8c8', mirror: '#9b6ec8' };
+    const id = new URLSearchParams(location.search).get('id') || 'color-emotion';
+
+    let note;
+    try {
+      note = await loadJson(`data/research-notes/${id}.json`);
+    } catch {
+      document.getElementById('note-root').innerHTML = `
+        <p class="section-label">Research Note</p>
+        <h1>노트를 찾을 수 없습니다</h1>
+        <p><a class="btn btn-ghost" href="research.html">연구 허브로</a></p>`;
+      throw new Error('note not found');
+    }
+
+    document.title = `${note.title} | 별빛연구소`;
+    const accent = PILLAR_COLOR[note.pillar] || '#6ec8c8';
+
+    const sections = (note.sections || []).map((sec) => {
+      const paras = (sec.paragraphs || []).map((p) => `<p>${p}</p>`).join('');
+      const bullets = sec.bullets?.length
+        ? `<ul class="research-note-bullets">${sec.bullets.map((b) => `<li>${b}</li>`).join('')}</ul>`
+        : '';
+      return `<section class="research-note-section"><h2>${sec.heading}</h2>${paras}${bullets}</section>`;
+    }).join('');
+
+    const related = (note.related || []).length
+      ? `<section class="research-note-section"><h2>함께 읽기</h2><ul class="research-note-related">${note.related.map((r) => `<li><a href="${r.href}">${r.label}</a></li>`).join('')}</ul></section>`
+      : '';
+
+    const sources = (note.sources || []).length
+      ? `<section class="research-note-section"><h2>출처</h2><ul class="research-note-sources">${note.sources.map((s) => `<li><a href="${s.url}" rel="noopener noreferrer">${s.label}</a></li>`).join('')}</ul></section>`
+      : '';
+
+    document.getElementById('note-root').innerHTML = `
+      <p class="section-label">Research Note</p>
+      <p class="research-note-pillar" style="--note-accent:${accent}">${note.pillarLabel || note.pillar}</p>
+      <h1 class="research-title research-note-title">${note.title}</h1>
+      <p class="research-note-date">${note.date}</p>
+      <p class="section-lead">${note.lead}</p>
+      ${sections}
+      <aside class="research-note-practice" style="--note-accent:${accent}">
+        <h2>10초 실습</h2>
+        <p>${note.practice}</p>
+      </aside>
+      ${related}
+      ${sources}
+      <p style="margin-top:1.5rem;"><a class="btn btn-ghost" href="research.html">연구 허브로</a></p>
+      <p class="disclaimer">별빛연구소 · 비영리 천체·심리 연구 · 운세·단정이 아닌 탐구 거울</p>
+    `;
+  </script>
+</body>
+</html>

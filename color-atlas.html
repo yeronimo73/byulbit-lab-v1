@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0f" />
+  <title>황도 12색 아틀라스 | 별빛연구소</title>
+  <meta name="description" content="별빛연구소 12별자리 hue 레퍼런스, hex, HSL, 원소, 천문·상징 분리, 면책." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <div id="star-canvas" aria-hidden="true"></div>
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="shell header-row">
+      <a class="brand" href="index.html">별빛<span>연구소</span></a>
+      <a class="btn btn-ghost" href="research.html" style="min-height:2.25rem;font-size:0.75rem;">← 연구 허브</a>
+    </div>
+  </header>
+
+  <main class="shell tool-page research-page" id="atlas-root">
+    <p class="section-label">Color Atlas</p>
+    <h1 class="research-title" id="atlas-title"></h1>
+    <p class="section-lead" id="atlas-lead"></p>
+    <p class="research-bib-note" id="atlas-disclaimer"></p>
+    <ul class="color-atlas-notes" id="atlas-global-notes"></ul>
+    <div class="color-atlas-grid" id="atlas-grid"></div>
+    <p style="margin-top:1.25rem;"><a class="btn btn-ghost" href="research-note.html?id=zodiac-hues">디자인 노트 읽기</a></p>
+    <p style="margin-top:0.75rem;"><a class="btn btn-ghost" href="research.html">연구 허브로</a></p>
+    <p class="disclaimer" id="atlas-foot"></p>
+  </main>
+
+  <script type="importmap">
+  { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }
+  </script>
+  <script type="module" src="js/bg.js"></script>
+  <script type="module">
+    import { loadJson } from './js/site.js?v=color-atlas';
+
+    const atlas = await loadJson('data/color-atlas.json');
+    document.title = `${atlas.title} | 별빛연구소`;
+    document.getElementById('atlas-title').textContent = atlas.title;
+    document.getElementById('atlas-lead').textContent = atlas.lead;
+    document.getElementById('atlas-disclaimer').textContent = atlas.disclaimer;
+    document.getElementById('atlas-foot').textContent =
+      atlas.updated ? `데이터 갱신: ${atlas.updated} · 별빛연구소` : '별빛연구소';
+
+    document.getElementById('atlas-global-notes').innerHTML = (atlas.globalNotes || [])
+      .map((n) => `<li>${n}</li>`)
+      .join('');
+
+    const ELEMENT_LABEL = { 불: '불', 흙: '흙', 공기: '공기', 물: '물' };
+
+    document.getElementById('atlas-grid').innerHTML = (atlas.swatches || [])
+      .map((s) => {
+        const hsl = s.hsl
+          ? `H${s.hsl.h}° S${s.hsl.s}% L${s.hsl.l}%`
+          : '';
+        return `
+          <article class="color-atlas-card" id="${s.signId}" style="--swatch:${s.hex}">
+            <div class="color-atlas-card__swatch" aria-hidden="true"></div>
+            <div class="color-atlas-card__body">
+              <header class="color-atlas-card__head">
+                <h2><a href="sign.html?id=${s.signId}">${s.nameKo}</a></h2>
+                <span class="color-atlas-card__element">${ELEMENT_LABEL[s.element] || s.element}</span>
+              </header>
+              <p class="color-atlas-card__hex">${s.hex} · ${hsl}</p>
+              <p class="color-atlas-card__role">${s.role}</p>
+              <p class="color-atlas-card__bridge">${s.astronomyBridge}</p>
+            </div>
+          </article>`;
+      })
+      .join('');
+  </script>
+</body>
+</html>

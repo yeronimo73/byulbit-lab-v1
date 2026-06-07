@@ -1,0 +1,98 @@
+{
+  "updated": "2026-06-07",
+  "tiers": [
+    {
+      "id": "tier-a",
+      "label": "학술 정본 (Tier A)",
+      "items": [
+        {
+          "id": "jonauskaite-mohr-2025",
+          "authors": "Jonauskaite, D. & Mohr, C.",
+          "year": 2025,
+          "title": "Do we feel colours? A systematic review of 128 years of psychological research linking colours and emotions",
+          "venue": "Psychonomic Bulletin & Review",
+          "doi": "10.3758/s13423-024-02615-z",
+          "url": "https://doi.org/10.3758/s13423-024-02615-z",
+          "note": "색과 감정 연상의 일관성과 「연상 ≠ 체감」 한계를 정리한 128년 체계적 고찰."
+        },
+        {
+          "id": "jonauskaite-2020",
+          "authors": "Jonauskaite, D. et al.",
+          "year": 2020,
+          "title": "Universal patterns in color-emotion associations are further shaped by linguistic and geographic proximity",
+          "venue": "Psychological Science",
+          "doi": "10.1177/0956797620948810",
+          "url": "https://doi.org/10.1177/0956797620948810",
+          "note": "30개국 횡단, 보편 패턴과 문화·언어적 변형."
+        },
+        {
+          "id": "elliot-2015",
+          "authors": "Elliot, A. J.",
+          "year": 2015,
+          "title": "Color and psychological functioning: A review of theoretical and empirical work",
+          "venue": "Frontiers in Psychology",
+          "doi": "10.3389/fpsyg.2015.00368",
+          "url": "https://doi.org/10.3389/fpsyg.2015.00368",
+          "note": "Color-in-Context 이론, 같은 색도 맥락에 따라 의미가 달라짐."
+        },
+        {
+          "id": "jung-shin-2025",
+          "authors": "정용선, 신지현",
+          "year": 2025,
+          "title": "국내 색채심리 연구동향 분석: 2014년부터 2024년까지 발표된 국내 학술지를 중심으로",
+          "venue": "미술치료연구",
+          "doi": "10.35594/kata.2025.32.6.003",
+          "url": "https://doi.org/10.35594/kata.2025.32.6.003",
+          "note": "국내 237편 색채심리 논문 동향, 실용·정신건강·예술·이론 분포."
+        }
+      ]
+    },
+    {
+      "id": "tier-b",
+      "label": "천문·환경 (Tier B)",
+      "items": [
+        {
+          "id": "nasa-spectrum",
+          "authors": "NASA Science",
+          "year": null,
+          "title": "Stars: Nature's Fusion Reactors, stellar classification and color",
+          "venue": "NASA Solar System Exploration",
+          "doi": null,
+          "url": "https://science.nasa.gov/universe/stars/",
+          "note": "별의 표면온도·스펙트럼과 겉보기 색(붉은 거성·푸른 별) 천문 사실."
+        },
+        {
+          "id": "cajochen-2005",
+          "authors": "Cajochen, C. et al.",
+          "year": 2005,
+          "title": "Exposure to bright light, especially blue light, during evening hours affects melatonin and sleep",
+          "venue": "Journal of Pineal Research (요약 인용)",
+          "doi": null,
+          "url": "https://doi.org/10.1111/j.1600-079X.2005.00263.x",
+          "note": "청색광·조명 맥락의 생리 반응, 「빛」 축 환경 연구 참고."
+        }
+      ]
+    },
+    {
+      "id": "tier-c",
+      "label": "문화·디자인 참고 (Tier C)",
+      "items": [
+        {
+          "id": "heller-2009",
+          "authors": "Heller, E.",
+          "year": 2009,
+          "title": "Wie Farben wirken (How Colors Work)",
+          "venue": "Rowohlt",
+          "doi": null,
+          "url": "https://www.colourexperience.ch/",
+          "note": "문화별 색 상징 사전, 단정·치료 주장 근거로 쓰지 않음. Colour Experience 팀이 학술 자료도 병행 제공."
+        }
+      ]
+    }
+  ],
+  "avoid": [
+    "Lüscher 색씨 검사, 성격·스트레스 진단 타당도 미확립",
+    "「이 색이 ○○ 감정을 치유한다」류의 단정적 마케팅 카피",
+    "점술·운세·출생 차트 단정을 색채·별자리 연구로 포장하는 표현"
+  ]
+}

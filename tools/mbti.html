@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0f" />
+  <title>MBTI 탐구 | 별빛연구소</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/site.css" />
+</head>
+<body>
+  <div id="star-canvas" aria-hidden="true"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="shell header-row">
+      <a class="brand" href="../index.html">별빛<span>연구소</span></a>
+      <a class="btn btn-ghost" href="../index.html" style="min-height:2.25rem;font-size:0.75rem;">홈</a>
+    </div>
+  </header>
+  <main class="shell tool-page">
+    <p class="section-label">MBTI Exploration</p>
+    <h1 style="font-family:var(--font-serif);font-size:1.5rem;margin-bottom:0.5rem;">MBTI 탐구</h1>
+    <p class="section-lead">MBTI는 외향·내향, 감각·직관, 사고·감정, 판단·인식 네 축으로 성향을 읽어 보는 자기이해 탐구입니다. 48문항에 답하면 16유형 결과와 각 축 비율(%)을 함께 확인할 수 있으며, 경계에 가까운 축은 별도 안내로 표시됩니다. 공식 검사나 임상 진단이 아닌 비공식 자가탐구 도구입니다.</p>
+    <div id="app"></div>
+  </main>
+  <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }</script>
+  <script type="module" src="../js/bg.js"></script>
+  <script type="module" src="mbti.js"></script>
+</body>
+</html>

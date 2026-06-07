@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-hidden="true">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="48" height="48" rx="10" fill="rgba(14,16,28,0.55)" stroke="#ffd84d" stroke-width="0.8" opacity="0.95"/>
+    <line x1="24" y1="24" x2="24" y2="10" stroke="#ffd84d" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+    <line x1="24" y1="24" x2="34" y2="16" stroke="#ffd84d" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+    <line x1="24" y1="24" x2="38" y2="28" stroke="#ffd84d" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+    <line x1="24" y1="24" x2="30" y2="38" stroke="#ffd84d" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+    <line x1="24" y1="24" x2="18" y2="38" stroke="#ffd84d" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+    <line x1="24" y1="24" x2="10" y2="28" stroke="#ffd84d" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+    <line x1="24" y1="24" x2="14" y2="16" stroke="#ffd84d" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+    <circle cx="24" cy="24" r="2.6" fill="#f4f2fa" filter="url(#glow)"/>
+    <circle cx="24" cy="24" r="0.9099999999999999" fill="#ffd84d" opacity="0.9"/>
+    <circle cx="24" cy="10" r="1.5" fill="#f4f2fa" filter="url(#glow)"/>
+    <circle cx="34" cy="16" r="1.4" fill="#f4f2fa" filter="url(#glow)"/>
+    <circle cx="38" cy="28" r="1.4" fill="#f4f2fa" filter="url(#glow)"/>
+    <circle cx="30" cy="38" r="1.4" fill="#f4f2fa" filter="url(#glow)"/>
+    <circle cx="18" cy="38" r="1.4" fill="#f4f2fa" filter="url(#glow)"/>
+    <circle cx="10" cy="28" r="1.4" fill="#f4f2fa" filter="url(#glow)"/>
+    <circle cx="14" cy="16" r="1.4" fill="#f4f2fa" filter="url(#glow)"/>
+</svg>

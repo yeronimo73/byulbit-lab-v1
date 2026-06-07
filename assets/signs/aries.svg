@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-hidden="true">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="48" height="48" rx="10" fill="rgba(14,16,28,0.55)" stroke="#e85d4a" stroke-width="0.8" opacity="0.95"/>
+    <line x1="24" y1="8" x2="14" y2="22" stroke="#e85d4a" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+    <line x1="24" y1="8" x2="34" y2="22" stroke="#e85d4a" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+    <line x1="14" y1="22" x2="24" y2="32" stroke="#e85d4a" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+    <line x1="34" y1="22" x2="24" y2="32" stroke="#e85d4a" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+    <line x1="24" y1="32" x2="24" y2="40" stroke="#e85d4a" stroke-width="1.2" stroke-linecap="round" opacity="0.85"/>
+    <circle cx="24" cy="8" r="2.2" fill="#f4f2fa" filter="url(#glow)"/>
+    <circle cx="24" cy="8" r="0.77" fill="#e85d4a" opacity="0.9"/>
+    <circle cx="14" cy="22" r="1.6" fill="#f4f2fa" filter="url(#glow)"/>
+    <circle cx="34" cy="22" r="1.6" fill="#f4f2fa" filter="url(#glow)"/>
+    <circle cx="24" cy="32" r="1.8" fill="#f4f2fa" filter="url(#glow)"/>
+    <circle cx="24" cy="40" r="1.4" fill="#f4f2fa" filter="url(#glow)"/>
+</svg>

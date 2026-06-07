@@ -1,0 +1,222 @@
+{
+  "project": "byulbit-lab-v1",
+  "updated": "2026-06-07",
+  "folders": {
+    "web_served": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/infographics/web",
+    "originals_png": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/infographics/originals",
+    "export_bundle": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-infographics",
+    "codex_cache": "/Users/yeronimo/.codex/generated_images"
+  },
+  "note": "web/ = 브라우저가 로드. originals/ = Codex PNG 원본. export_bundle = Finder에서 한곳에 모아둔 복사본.",
+  "retention_policy": "원본 PNG(originals/, export_bundle/, ~/.codex/generated_images)는 사용자 승인 없이 삭제·덮어쓰기 금지. WebP는 web/에만 추가.",
+  "items": [
+    {
+      "id": "full-moon-2026",
+      "title": "「달빛 일지」. 보름달이 비추는 감정 지도",
+      "web": {
+        "thumb": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/infographics/web/full-moon-2026-thumb.webp",
+          "bytes": 195984,
+          "exists": true
+        },
+        "full": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/infographics/web/full-moon-2026-full.webp",
+          "bytes": 274436,
+          "exists": true
+        },
+        "served_thumb": "assets/infographics/web/full-moon-2026-thumb.webp",
+        "served_full": "assets/infographics/web/full-moon-2026-full.webp"
+      },
+      "original_png": {
+        "thumb": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/infographics/originals/full-moon-2026-thumb.png",
+          "bytes": 2260648,
+          "exists": true
+        },
+        "full": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/infographics/originals/full-moon-2026-full.png",
+          "bytes": 2661346,
+          "exists": true
+        }
+      },
+      "export_bundle": {
+        "thumb_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-infographics/full-moon-2026-thumb.webp",
+          "bytes": 195984,
+          "exists": true
+        },
+        "full_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-infographics/full-moon-2026-full.webp",
+          "bytes": 274436,
+          "exists": true
+        },
+        "thumb_png": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-infographics/full-moon-2026-thumb.png",
+          "bytes": 2260648,
+          "exists": true
+        },
+        "full_png": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-infographics/full-moon-2026-full.png",
+          "bytes": 2661346,
+          "exists": true
+        }
+      }
+    },
+    {
+      "id": "meteor-showers",
+      "title": "쌍둥이·사자. 유성우가 지나는 별자리와 대화",
+      "web": {
+        "thumb": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/infographics/web/meteor-showers-thumb.webp",
+          "bytes": 101606,
+          "exists": true
+        },
+        "full": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/infographics/web/meteor-showers-full.webp",
+          "bytes": 170706,
+          "exists": true
+        },
+        "served_thumb": "assets/infographics/web/meteor-showers-thumb.webp",
+        "served_full": "assets/infographics/web/meteor-showers-full.webp"
+      },
+      "original_png": {
+        "thumb": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/infographics/originals/meteor-showers-thumb.png",
+          "bytes": 2000147,
+          "exists": true
+        },
+        "full": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/infographics/originals/meteor-showers-full.png",
+          "bytes": 2224675,
+          "exists": true
+        }
+      },
+      "export_bundle": {
+        "thumb_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-infographics/meteor-showers-thumb.webp",
+          "bytes": 101606,
+          "exists": true
+        },
+        "full_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-infographics/meteor-showers-full.webp",
+          "bytes": 170706,
+          "exists": true
+        },
+        "thumb_png": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-infographics/meteor-showers-thumb.png",
+          "bytes": 2000147,
+          "exists": true
+        },
+        "full_png": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-infographics/meteor-showers-full.png",
+          "bytes": 2224675,
+          "exists": true
+        }
+      }
+    },
+    {
+      "id": "equinox",
+      "title": "균형의 날. 양자리·천칭 축으로 읽는 춘분·추분",
+      "web": {
+        "thumb": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/infographics/web/equinox-thumb.webp",
+          "bytes": 104740,
+          "exists": true
+        },
+        "full": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/infographics/web/equinox-full.webp",
+          "bytes": 154956,
+          "exists": true
+        },
+        "served_thumb": "assets/infographics/web/equinox-thumb.webp",
+        "served_full": "assets/infographics/web/equinox-full.webp"
+      },
+      "original_png": {
+        "thumb": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/infographics/originals/equinox-thumb.png",
+          "bytes": 2066196,
+          "exists": true
+        },
+        "full": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/infographics/originals/equinox-full.png",
+          "bytes": 2261822,
+          "exists": true
+        }
+      },
+      "export_bundle": {
+        "thumb_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-infographics/equinox-thumb.webp",
+          "bytes": 104740,
+          "exists": true
+        },
+        "full_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-infographics/equinox-full.webp",
+          "bytes": 154956,
+          "exists": true
+        },
+        "thumb_png": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-infographics/equinox-thumb.png",
+          "bytes": 2066196,
+          "exists": true
+        },
+        "full_png": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-infographics/equinox-full.png",
+          "bytes": 2261822,
+          "exists": true
+        }
+      }
+    },
+    {
+      "id": "universe-year",
+      "title": "우주 한 바퀴, 인간 한 순간. 겸손의 심리 지도",
+      "web": {
+        "thumb": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/infographics/web/universe-year-thumb.webp",
+          "bytes": 159278,
+          "exists": true
+        },
+        "full": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/infographics/web/universe-year-full.webp",
+          "bytes": 169046,
+          "exists": true
+        },
+        "served_thumb": "assets/infographics/web/universe-year-thumb.webp",
+        "served_full": "assets/infographics/web/universe-year-full.webp"
+      },
+      "original_png": {
+        "thumb": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/infographics/originals/universe-year-thumb.png",
+          "bytes": 2258312,
+          "exists": true
+        },
+        "full": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-v1/assets/infographics/originals/universe-year-full.png",
+          "bytes": 2219487,
+          "exists": true
+        }
+      },
+      "export_bundle": {
+        "thumb_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-infographics/universe-year-thumb.webp",
+          "bytes": 159278,
+          "exists": true
+        },
+        "full_webp": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-infographics/universe-year-full.webp",
+          "bytes": 169046,
+          "exists": true
+        },
+        "thumb_png": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-infographics/universe-year-thumb.png",
+          "bytes": 2258312,
+          "exists": true
+        },
+        "full_png": {
+          "path": "/Volumes/YSSD4/Y_Y/Grok Contents/Rostar/exports/byulbit-lab-infographics/universe-year-full.png",
+          "bytes": 2219487,
+          "exists": true
+        }
+      }
+    }
+  ]
+}

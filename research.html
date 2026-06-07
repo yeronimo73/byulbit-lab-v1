@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0f" />
+  <title>연구 허브 | 별빛연구소</title>
+  <meta name="description" content="별빛연구소 연구 허브, 별(천문)·빛(색채)·거울(심리) 세 축, 연구 방침, 참고문헌." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <div id="star-canvas" aria-hidden="true"></div>
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="shell header-row">
+      <a class="brand" href="index.html">별빛<span>연구소</span></a>
+      <nav aria-label="주 메뉴">
+        <ul class="nav-desktop">
+          <li><a href="index.html#about">연구소</a></li>
+          <li><a href="research.html" aria-current="page">연구</a></li>
+          <li><a href="index.html#signs">12별자리</a></li>
+          <li><a href="index.html#info">인포그래픽</a></li>
+          <li><a href="tools/mbti.html">MBTI</a></li>
+          <li><a href="tools/enneagram.html">에니어그램</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="메뉴" aria-expanded="false" aria-controls="nav-drawer">☰</button>
+    </div>
+  </header>
+
+  <nav class="nav-drawer" id="nav-drawer" aria-label="모바일 메뉴">
+    <ul>
+      <li><a href="index.html#about">연구소</a></li>
+      <li><a href="research.html">연구 허브</a></li>
+      <li><a href="index.html#signs">12별자리</a></li>
+      <li><a href="index.html#info">인포그래픽</a></li>
+      <li><a href="tools/mbti.html">MBTI 탐구</a></li>
+      <li><a href="tools/enneagram.html">에니어그램</a></li>
+    </ul>
+  </nav>
+
+  <main class="shell tool-page research-page" id="research-root">
+    <p class="section-label" id="research-label">Starlight Research Hub</p>
+    <h1 class="research-title" id="research-title">별빛 연구 허브</h1>
+    <p class="section-lead" id="research-lead"></p>
+
+    <section class="research-section" aria-labelledby="pillars-heading">
+      <h2 id="pillars-heading">세 축</h2>
+      <div class="research-pillars" id="research-pillars"></div>
+    </section>
+
+    <section class="research-section" aria-labelledby="sky-heading" id="research-sky-section" hidden>
+      <h2 id="sky-heading">이달의 하늘</h2>
+      <p class="research-bib-note" id="research-sky-lead"></p>
+      <ul class="research-sky-list" id="research-sky-highlights"></ul>
+      <p style="margin-top:0.75rem;"><a class="btn btn-ghost" href="sky.html">2026 연간 관측 달력 →</a></p>
+    </section>
+
+    <section class="research-section" aria-labelledby="notes-heading" id="research-notes-section" hidden>
+      <h2 id="notes-heading">연구 노트</h2>
+      <p class="research-bib-note">월 1편, 별·빛·거울 축별 짧은 리서치와 10초 실습. 점술·치료 단정 없음.</p>
+      <ul class="research-notes-list" id="research-notes-list"></ul>
+      <p style="margin-top:0.85rem;"><a class="btn btn-ghost" href="color-atlas.html">황도 12색 아틀라스 →</a></p>
+    </section>
+
+    <section class="research-section" aria-labelledby="policy-heading">
+      <h2 id="policy-heading">연구 방침</h2>
+      <ul class="research-policy" id="research-policy"></ul>
+    </section>
+
+    <section class="research-section" aria-labelledby="bib-heading">
+      <h2 id="bib-heading">참고문헌</h2>
+      <p class="research-bib-note">별빛연구소 카피·퀴즈 설계 시 우선 인용하는 출처입니다. 상업적 색채 단정이나 점술 도구는 포함하지 않습니다.</p>
+      <div id="research-bibliography"></div>
+    </section>
+
+    <section class="research-section research-sample" id="research-sample" hidden>
+      <h2>샘플 · 이달의 별자리</h2>
+      <p id="research-sample-note"></p>
+      <p><a class="btn btn-ghost" id="research-sample-link" href="#">이달의 별자리 4층 샘플 읽기</a></p>
+    </section>
+
+    <p style="margin-top:1.5rem;"><a class="btn btn-ghost" href="index.html">홈으로</a></p>
+    <p class="disclaimer">별빛연구소 · 비영리 천체·심리 연구 · 운세·단정이 아닌 탐구 거울</p>
+  </main>
+
+  <script type="importmap">
+  { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }
+  </script>
+  <script type="module" src="js/bg.js"></script>
+  <script type="module">
+    import { loadJson, initNav } from './js/site.js?v=research-hub';
+    import { getCurrentSign, getSkyCalendarEntry } from './js/scoring.js';
+
+    initNav();
+
+    const [hub, bib, { entries: skyEntries }, notesIndex, { signs }] = await Promise.all([
+      loadJson('data/research-hub.json'),
+      loadJson('data/research-bibliography.json'),
+      loadJson('data/sky-calendar.json'),
+      loadJson('data/research-notes/index.json').catch(() => ({ notes: [] })),
+      loadJson('data/signs.json'),
+    ]);
+
+    const skyMonth = getSkyCalendarEntry(skyEntries);
+    if (skyMonth) {
+      const skySec = document.getElementById('research-sky-section');
+      skySec.hidden = false;
+      document.getElementById('research-sky-lead').textContent = skyMonth.lead;
+      document.getElementById('research-sky-highlights').innerHTML = (skyMonth.highlights || [])
+        .map((h) => {
+          const title = h.link
+            ? `<a href="${h.link}">${h.title}</a>`
+            : h.title;
+          return `<li><strong>${h.when}</strong>: ${title}<span class="research-sky-note">${h.note || ''}</span></li>`;
+        })
+        .join('');
+    }
+
+    const notes = notesIndex.notes || [];
+    if (notes.length) {
+      const notesSec = document.getElementById('research-notes-section');
+      notesSec.hidden = false;
+      const PILLAR_COLOR = { star: '#ffd84d', light: '#6ec8c8', mirror: '#9b6ec8' };
+      document.getElementById('research-notes-list').innerHTML = notes.map((n) => `
+        <li class="research-notes-item" style="--note-accent:${PILLAR_COLOR[n.pillar] || '#6ec8c8'}">
+          <a href="research-note.html?id=${n.id}" class="research-notes-item__link">
+            <span class="research-notes-item__pillar">${n.pillarLabel || n.pillar}</span>
+            <span class="research-notes-item__title">${n.title}</span>
+            <span class="research-notes-item__teaser">${n.teaser}</span>
+            <span class="research-notes-item__date">${n.date}</span>
+          </a>
+        </li>
+      `).join('');
+    }
+
+    document.getElementById('research-lead').textContent = hub.lead;
+
+    const pillarsEl = document.getElementById('research-pillars');
+    pillarsEl.innerHTML = hub.pillars.map((p) => `
+      <article class="research-pillar" style="--pillar-color:${p.color}">
+        <h3 class="research-pillar__title">${p.label}</h3>
+        <p class="research-pillar__summary">${p.summary}</p>
+        <p class="research-pillar__sub">연구 주제</p>
+        <ul>${p.topics.map((t) => `<li>${t}</li>`).join('')}</ul>
+        <p class="research-pillar__sub">사이트에서</p>
+        <ul>${p.onSite.map((t) => `<li>${t}</li>`).join('')}</ul>
+      </article>
+    `).join('');
+
+    document.getElementById('research-policy').innerHTML =
+      hub.policy.map((line) => `<li>${line}</li>`).join('');
+
+    const bibRoot = document.getElementById('research-bibliography');
+    bibRoot.innerHTML = bib.tiers.map((tier) => `
+      <div class="research-bib-tier">
+        <h3 class="research-bib-tier__title">${tier.label}</h3>
+        <ul class="research-bib-list">
+          ${tier.items.map((item) => {
+            const meta = [item.authors, item.year, item.venue].filter(Boolean).join(' · ');
+            const link = item.url
+              ? `<a href="${item.url}" rel="noopener noreferrer">${item.title}</a>`
+              : item.title;
+            return `
+              <li class="research-bib-item">
+                <p class="research-bib-item__title">${link}</p>
+                <p class="research-bib-item__meta">${meta}</p>
+                ${item.note ? `<p class="research-bib-item__note">${item.note}</p>` : ''}
+              </li>`;
+          }).join('')}
+        </ul>
+      </div>
+    `).join('');
+
+    if (bib.avoid?.length) {
+      bibRoot.insertAdjacentHTML('beforeend', `
+        <div class="research-bib-avoid">
+          <h3 class="research-bib-tier__title">인용·사용하지 않는 것</h3>
+          <ul>${bib.avoid.map((a) => `<li>${a}</li>`).join('')}</ul>
+        </div>
+      `);
+    }
+
+    const current = getCurrentSign(signs);
+    if (current) {
+      const sample = document.getElementById('research-sample');
+      sample.hidden = false;
+      const note = hub.sampleSignNote || '';
+      document.getElementById('research-sample-note').textContent =
+        `${current.nameKo}(${current.period}). ${note}`;
+      const link = document.getElementById('research-sample-link');
+      link.href = `sign.html?id=${current.id}`;
+      link.textContent = `${current.nameKo} 4층 샘플 읽기`;
+    }
+  </script>
+</body>
+</html>

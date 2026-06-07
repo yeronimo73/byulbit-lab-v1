@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0f" />
+  <title>별자리 이야기 | 별빛연구소</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=IBM+Plex+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <div id="star-canvas" aria-hidden="true"></div>
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="shell header-row">
+      <a class="brand" href="index.html">별빛<span>연구소</span></a>
+      <a class="btn btn-ghost" href="index.html#signs" style="min-height:2.25rem;font-size:0.75rem;">← 12별자리</a>
+    </div>
+  </header>
+
+  <main class="shell tool-page sign-detail" id="content"></main>
+
+  <script type="importmap">
+  { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }
+  </script>
+  <script type="module" src="js/bg.js"></script>
+  <script type="module">
+    import { loadJson } from './js/site.js';
+    import { signSymbolMarkup } from './js/sign-icons.js';
+
+    const id = new URLSearchParams(location.search).get('id');
+    const { signs } = await loadJson('data/signs.json');
+    const sign = signs.find((s) => s.id === id) || signs[0];
+
+    const chips = (sign.keywords || []).map((k) => `<span class="sign-chip">${k}</span>`).join('');
+    const questions = (sign.questions || []).map((q) => `<li>${q}</li>`).join('');
+
+    const hasStarLayer = Array.isArray(sign.astronomyFacts) && sign.astronomyFacts.length > 0;
+    const hasLightLayer = sign.lightNote || sign.colorAssociation || sign.colorContext || sign.colorPractice;
+
+    const starSection = hasStarLayer ? `
+      <h2>별 · 천문</h2>
+      <ul class="sign-astro-facts">${sign.astronomyFacts.map((f) => `<li>${f}</li>`).join('')}</ul>
+    ` : '';
+
+    const lightSection = hasLightLayer ? `
+      <h2>빛 · 색채</h2>
+      <div class="sign-light-block">
+        ${sign.lightNote ? `<p class="sign-color-note" style="--sign-color:${sign.color}">${sign.lightNote}</p>` : ''}
+        ${sign.colorAssociation ? `<h3>연상</h3><p>${sign.colorAssociation}</p>` : ''}
+        ${sign.colorContext ? `<h3>맥락</h3><p>${sign.colorContext}</p>` : ''}
+        ${sign.colorPractice ? `<h3>짧은 실습</h3><p>${sign.colorPractice}</p>` : ''}
+        <p class="sign-atlas-link"><a class="btn btn-ghost" href="color-atlas.html#${sign.id}" style="--sign-color:${sign.color}">황도 12색 아틀라스에서 ${sign.nameKo} swatch 보기</a></p>
+        ${sign.sources?.length ? `
+          <p class="sign-sources">참고: ${sign.sources.map((s) =>
+            s.url ? `<a href="${s.url}" rel="noopener noreferrer">${s.label}</a>` : s.label
+          ).join(' · ')}</p>
+        ` : ''}
+      </div>
+    ` : (sign.colorPsych ? `
+      <h2>색채와 마음</h2>
+      <p class="sign-color-note" style="--sign-color:${sign.color}">${sign.colorPsych}</p>
+    ` : '');
+
+    document.title = `${sign.nameKo} | 별빛연구소`;
+    document.getElementById('content').innerHTML = `
+      <p class="section-label">Zodiac Story</p>
+      <div class="sign-symbol-hero" aria-hidden="true">
+        ${signSymbolMarkup(sign.id, sign.color)}
+      </div>
+      <p class="sign-hero">${sign.nameKo} <span style="font-size:0.5em;color:var(--muted)">${sign.nameEn}</span></p>
+      <p class="sign-tagline">${sign.tagline}</p>
+      <p class="sign-period">${sign.period}</p>
+      <div class="sign-meta">
+        <span class="sign-meta__item">${sign.element} 원소</span>
+        <span class="sign-meta__item">${sign.modality} 궁</span>
+      </div>
+      <div class="sign-chips">${chips}</div>
+
+      <h2>소개</h2>
+      <p>${sign.summary}</p>
+
+      <h2>신화</h2>
+      <p>${sign.myth}</p>
+
+      <h2>심리 거울</h2>
+      <p>${sign.psychology || ''}</p>
+
+      ${starSection}
+
+      ${lightSection}
+
+      <div class="sign-duality">
+        <div class="sign-duality__col">
+          <h3>빛</h3>
+          <p>${sign.gift || ''}</p>
+        </div>
+        <div class="sign-duality__col">
+          <h3>그림자</h3>
+          <p>${sign.shadow || ''}</p>
+        </div>
+      </div>
+
+      <h2>탐구 질문</h2>
+      <ul class="sign-questions">${questions}</ul>
+
+      <h2>이 구간에서</h2>
+      <p>${sign.explore}</p>
+
+      <h2>하늘에서 보기</h2>
+      <p>${sign.observe}</p>
+
+      <h2>성격 탐구와의 울림</h2>
+      <p class="sign-echo">${sign.mbtiEcho || ''}</p>
+
+      <p style="margin-top:1.5rem;"><a class="btn btn-ghost" href="index.html#signs">목록으로</a></p>
+      <p class="disclaimer">별자리는 예언이 아닙니다 · 자기이해를 위한 탐구 거울입니다.</p>
+    `;
+  </script>
+</body>
+</html>

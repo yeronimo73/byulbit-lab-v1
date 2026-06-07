@@ -1,0 +1,32 @@
+{
+  "quizzes": [
+    {
+      "infographicId": "equinox",
+      "slug": "equinox-quiz",
+      "title": "균형의 날 지식 퀴즈",
+      "itemCount": 12,
+      "color": "#9b6ec8"
+    },
+    {
+      "infographicId": "full-moon-2026",
+      "slug": "full-moon-quiz",
+      "title": "달빛 일지 지식 퀴즈",
+      "itemCount": 10,
+      "color": "#ffd84d"
+    },
+    {
+      "infographicId": "meteor-showers",
+      "slug": "meteor-quiz",
+      "title": "유성우 관측 지식 퀴즈",
+      "itemCount": 10,
+      "color": "#6ec8c8"
+    },
+    {
+      "infographicId": "universe-year",
+      "slug": "universe-year-quiz",
+      "title": "우주 달력 지식 퀴즈",
+      "itemCount": 10,
+      "color": "#c47a3a"
+    }
+  ]
+}

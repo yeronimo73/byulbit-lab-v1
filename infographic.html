@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0a0a0f" />
+  <title>인포그래픽 | 별빛연구소</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/infographic-poster.css" />
+  <link rel="stylesheet" href="css/planet-mirror-infographic.css" />
+</head>
+<body>
+  <div id="star-canvas" aria-hidden="true"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="shell header-row">
+      <a class="brand" href="index.html">별빛<span>연구소</span></a>
+      <a class="btn btn-ghost" href="index.html#info" style="min-height:2.25rem;font-size:0.75rem;">← 목록</a>
+    </div>
+  </header>
+  <main class="shell tool-page sign-detail" id="content"></main>
+  <script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }</script>
+  <script type="module" src="js/bg.js"></script>
+  <script type="module">
+    import { loadJson } from './js/site.js';
+    import { renderInfographicPoster, renderInfographicLayers } from './js/infographic-poster.js';
+    import { renderPlanetMirrorInfographic } from './js/planet-mirror-infographic.js';
+
+    const bodies = {
+      'full-moon-2026': '<p>「달빛 일지」는 보름달을 <strong>감정의 밝기</strong>로 읽는 탐구 카드입니다. 하늘의 달 위상과 황도 구간을 짝지어, 그날 스스로에게 묻는 심리 질문을 덧붙였습니다.</p>',
+      'meteor-showers': '<p>유성우는 하늘의 사건이지만, 별빛연구소는 <strong>쌍둥이·사자</strong>의 상징과 연결해 읽습니다. 관측과 함께 대화·기록 프롬프트를 실천해 보세요.</p>',
+      'equinox': '<p>춘분·추분은 <strong>양자리(시작)</strong>와 <strong>천칭자리(균형)</strong> 축이 계절과 맞닿는 날입니다. 천문 사실을 바탕으로 심리 거울을 펼칩니다.</p>',
+      'universe-year': '<p>우주 137억 년을 1년으로 접으면 인류는 마지막 초에 등장합니다. 겸손과 자기 위치를 묻는 <strong>심리 지도</strong>입니다.</p>',
+    };
+
+    const id = new URLSearchParams(location.search).get('id');
+    const [{ items }, details, { quizzes }, planetMeta, planetCopy] = await Promise.all([
+      loadJson('data/infographics.json'),
+      loadJson('data/infographic-details.json'),
+      loadJson('data/knowledge-quizzes.json'),
+      loadJson('data/planet-types.json'),
+      loadJson('data/planet-mirror-copy.json'),
+    ]);
+    const item = items.find((i) => i.id === id) || items[0];
+    const quiz = quizzes.find((q) => q.infographicId === item.id);
+    document.title = `${item.title} | 별빛연구소`;
+
+    if (item.type === 'planet-mirror' || item.id === 'planet-mirror') {
+      const pmDetail = details['planet-mirror'];
+      const pmLayers = renderInfographicLayers(pmDetail, { accent: item.color || '#ffd84d' });
+      document.getElementById('content').innerHTML = `
+        <p class="section-label">Planet Mirror</p>
+        <h1 class="sign-hero" style="font-size:clamp(1.35rem,4.5vw,2rem);">행성 거울 탐구</h1>
+        <p class="section-lead">24문항 · 8행성 울림 분포(%) · 운명 단정이 아닌 자기이해 거울</p>
+        ${renderPlanetMirrorInfographic(planetMeta, planetCopy, { heroImage: item.image })}
+        ${pmLayers}
+      `;
+    } else {
+      const visual = item.image
+        ? `<img class="info-detail-img" src="${item.image}" alt="${item.title}" />`
+        : `<div style="margin:1.25rem 0;">${renderInfographicPoster(item, details[item.id])}</div>`;
+      const quizCta = quiz
+        ? `<div class="tool-actions" style="margin-top:1.25rem;">
+            <a class="btn btn-gold" href="tools/${quiz.slug}.html">${quiz.title}</a>
+            <a class="btn btn-ghost" href="tools/knowledge.html">지식 퀴즈 목록</a>
+          </div>`
+        : '';
+
+      const detail = details[item.id];
+      const layers = renderInfographicLayers(detail, { accent: item.color });
+
+      document.getElementById('content').innerHTML = `
+        <p class="section-label">Infographic</p>
+        <h1 class="sign-hero" style="font-size:clamp(1.35rem,4.5vw,2rem);">${item.title}</h1>
+        ${visual}
+        ${bodies[item.id] || `<p>${item.teaser}</p>`}
+        ${layers}
+        ${quizCta}
+        <p class="disclaimer">별빛연구소 자체 제작 탐구용 콘텐츠 · 점술이 아닙니다.</p>
+      `;
+    }
+  </script>
+</body>
+</html>

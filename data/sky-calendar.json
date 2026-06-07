@@ -1,0 +1,109 @@
+{
+  "updated": "2026-06-07",
+  "entries": [
+    {
+      "year": 2026,
+      "month": 1,
+      "lead": "1월, 겨울 별자리가 가장 밝습니다. 오리온·쌍둥이를 찾기 좋은 시기입니다.",
+      "highlights": [
+        { "when": "1/3~4", "title": "쿼드란티드 유성우 극대", "type": "meteor", "note": "새벽 북동쪽, 달 없는 날이 유리" },
+        { "when": "1/13", "title": "늑대달(보름)", "type": "moon", "note": "달빛 일지 1월 항목 참고" }
+      ]
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "lead": "2월, 쌍둥이자리가 저녁 하늘의 주인공입니다. 이달의 별자리와 함께 읽기 좋습니다.",
+      "highlights": [
+        { "when": "2/12", "title": "눈달(보름)", "type": "moon", "note": "달빛 일지" }
+      ]
+    },
+    {
+      "year": 2026,
+      "month": 3,
+      "lead": "3월, 춘분 전후, 낮과 밤의 길이가 맞춰집니다. 균형의 날 인포그래픽과 연결됩니다.",
+      "highlights": [
+        { "when": "3/14", "title": "벌레달(보름)", "type": "moon", "note": "달빛 일지" },
+        { "when": "3/20 전후", "title": "춘분", "type": "sun", "note": "낮≈밤 · 양자리·천칭 축" }
+      ]
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "lead": "4월, 봄 하늘이 길어집니다. 서쪽 저녁 하늘에서 별자리 관측을 시작해 보세요.",
+      "highlights": [
+        { "when": "4/13", "title": "분홍달(보름)", "type": "moon", "note": "달빛 일지" }
+      ]
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "lead": "5월, 쌍둥이자리 시즌이 이어집니다. 21일부터 황도상 태양이 쌍둥이 구간을 지납니다.",
+      "highlights": [
+        { "when": "5/12", "title": "꽃달(보름)", "type": "moon", "note": "달빛 일지" },
+        { "when": "5/21~", "title": "황도 쌍둥이자리 구간", "type": "zodiac", "note": "천문 좌표 · 운세와 별개" }
+      ]
+    },
+    {
+      "year": 2026,
+      "month": 6,
+      "lead": "6월, 딸기달(6/11)과 하지(6/21). 쌍둥이자리가 이달의 별자리이며, 말일부터 게자리 황도 구간이 시작됩니다.",
+      "highlights": [
+        { "when": "6/11", "title": "딸기달(보름)", "type": "moon", "note": "달빛 일지 · 6/11", "link": "infographic.html?id=full-moon-2026" },
+        { "when": "6/21", "title": "하지(여름)", "type": "sun", "note": "북반구에서 낮이 가장 깁니다" },
+        { "when": "6/22~", "title": "황도 게자리 구간 시작", "type": "zodiac", "note": "천문 좌표", "link": "sign.html?id=cancer" }
+      ]
+    },
+    {
+      "year": 2026,
+      "month": 7,
+      "lead": "7월, 게자리·사자자리 시즌. 밤하늘이 짧지만 남쪽에서 사자자리를 찾기 좋습니다.",
+      "highlights": [
+        { "when": "7/11", "title": "벅달(보름, 예상)", "type": "moon", "note": "달빛 일지 후속 항목 예정" },
+        { "when": "7/23~", "title": "황도 사자자리 구간", "type": "zodiac", "note": "레굴루스 방향", "link": "sign.html?id=leo" }
+      ]
+    },
+    {
+      "year": 2026,
+      "month": 8,
+      "lead": "8월, 사자자리와 처녀자리가 이어집니다. 은하수가 밝은 관측 시기입니다.",
+      "highlights": [
+        { "when": "8/12~13", "title": "페르세우스자리 유성우", "type": "meteor", "note": "여름 대표 유성우 · 새벽" }
+      ]
+    },
+    {
+      "year": 2026,
+      "month": 9,
+      "lead": "9월, 추분 전후, 다시 낮과 밤의 균형. 균형의 날 인포그래픽을 다시 읽기 좋습니다.",
+      "highlights": [
+        { "when": "9/22~23", "title": "추분", "type": "sun", "note": "균형의 날 인포", "link": "infographic.html?id=equinox" }
+      ]
+    },
+    {
+      "year": 2026,
+      "month": 10,
+      "lead": "10월, 가을 하늘, 처녀·천칭 구간. 유성우 시즌이 다시 시작됩니다.",
+      "highlights": [
+        { "when": "10/21~22", "title": "오리온자리 유성우 극대", "type": "meteor", "note": "새벽 남동쪽" }
+      ]
+    },
+    {
+      "year": 2026,
+      "month": 11,
+      "lead": "11월, 사자자리 유성우(11/17~18)와 겨울 별자리가 돌아옵니다.",
+      "highlights": [
+        { "when": "11/17~18", "title": "사자자리 유성우", "type": "meteor", "note": "유성우 인포", "link": "infographic.html?id=meteor-showers" },
+        { "when": "11/21", "title": "우주 달력 인포 발행일", "type": "note", "note": "겸손의 지도", "link": "infographic.html?id=universe-year" }
+      ]
+    },
+    {
+      "year": 2026,
+      "month": 12,
+      "lead": "12월, 쌍둥이자리 유성우(12/13~14)와 오리온이 겨울 하늘을 지배합니다.",
+      "highlights": [
+        { "when": "12/13~14", "title": "쌍둥이자리 유성우", "type": "meteor", "note": "유성우 인포", "link": "infographic.html?id=meteor-showers" },
+        { "when": "12/22", "title": "동지", "type": "sun", "note": "북반구에서 밤이 가장 깁니다" }
+      ]
+    }
+  ]
+}

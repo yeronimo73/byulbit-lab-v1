@@ -1,0 +1,60 @@
+{
+  "id": "zodiac-hues",
+  "title": "황도 12색 디자인 노트",
+  "pillar": "light",
+  "pillarLabel": "빛 · 색채",
+  "date": "2026-06-07",
+  "lead": "별빛연구소 12별자리 hue는 점술 팔레트가 아니라, 원소·신화·가독성을 맞춘 디자인 선택입니다. 각 색은 명도·채도와 함께 `color-atlas.json`에 기록되어 있으며, 천문 실측색과 문화 상징이 겹치는 지점은 `lightNote`에서 분리해 읽습니다.",
+  "sections": [
+    {
+      "heading": "왜 12색인가",
+      "paragraphs": [
+        "황도 12궁은 IAU 천문 좌표입니다. 사이트의 12색은 이 구간을 시각적으로 구분하고, 별·빛·거울 3축 콘텐츠를 한눈에 연결하기 위한 UI 언어입니다.",
+        "불·흙·공기·물 네 원소에 따른 따뜻함·차가움·채도 대비를 맞췄습니다. 예: 불(양·사자·사수)은 따뜻한 hue, 공기(쌍둥이·천칭·물병)는 청록·하늘 계열."
+      ]
+    },
+    {
+      "heading": "천문색과 디자인색",
+      "paragraphs": [
+        "레굴루스(사자)는 청백색 별이지만 사이트 hue는 금빛(#ffd84d)입니다. 알데바란(황소)은 붉은 거성이지만 상징색은 녹(#6ec894)입니다.",
+        "이 차이는 버그가 아니라 층위 분리입니다. `astronomyFacts`·`lightNote`는 천문 사실을, hex swatch는 탐구·기록용 앵커를 담습니다."
+      ]
+    },
+    {
+      "heading": "명도·채도 읽기",
+      "bullets": [
+        "채도 높음(사자 금빛, 양자리 오렌지), 주목·시작·에너지 연상",
+        "채도 낮음(염소 회청, 처녀 올리브), 구조·인내·집중 연상",
+        "명도 높음(게 하늘빛, 천칭 라벤더), 부드러운·중립적 앵커",
+        "맥락에 따라 의미는 달라질 수 있음, Color-in-Context"
+      ]
+    },
+    {
+      "heading": "아틀라스와 별자리 페이지",
+      "paragraphs": [
+        "`color-atlas.html`에서 12 swatch·HSL·면책을 한눈에 볼 수 있습니다.",
+        "각 `sign.html`의 빛·색채 섹션은 아틀라스 hue를 전제로 10초 실습(`colorPractice`)을 제안합니다."
+      ]
+    }
+  ],
+  "practice": "황도 12색 아틀라스에서 자신의 생일 별자리 swatch를 10초 바라본 뒤, 「이 hue가 떠올리게 하는 단어」와 「오늘 실제 기분 단어」를 적어 보세요. 디자인 연상과 그날의 체감을 나란히 두는 연습입니다.",
+  "related": [
+    { "label": "황도 12색 아틀라스", "href": "color-atlas.html" },
+    { "label": "연구 노트, 별빛의 색", "href": "research-note.html?id=stellar-color" },
+    { "label": "12별자리 목록", "href": "index.html#signs" }
+  ],
+  "sources": [
+    {
+      "label": "Elliot (2015), Color-in-Context",
+      "url": "https://doi.org/10.3389/fpsyg.2015.00368"
+    },
+    {
+      "label": "Jonauskaite & Mohr (2025)",
+      "url": "https://doi.org/10.3758/s13423-024-02615-z"
+    },
+    {
+      "label": "NASA, Stars (겉보기 색)",
+      "url": "https://science.nasa.gov/universe/stars/"
+    }
+  ]
+}

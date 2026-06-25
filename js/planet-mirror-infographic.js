@@ -30,7 +30,7 @@ function archetypeChips(archetype) {
 
 function renderPlanetCard(key, p) {
   const signs = (p.relatedSigns || [])
-    .map((id) => `<a class="planet-card__sign" href="sign.html?id=${id}">${SIGN_NAMES[id] || id}</a>`)
+    .map((id) => `<a class="planet-card__sign" href="/sign?id=${id}">${SIGN_NAMES[id] || id}</a>`)
     .join('');
   const q = (p.exploreQuestions || [])[0] || '';
 
@@ -110,8 +110,8 @@ export function renderPlanetMirrorInfographic(meta, copy, { heroImage } = {}) {
 
     <p class="section-lead planet-cta-lead">준비되셨나요? 8행성 울림 분포를 확인해 보세요.</p>
     <div class="tool-actions planet-cta">
-      <a class="btn btn-gold" href="tools/planet-quiz.html">24문항 탐구 시작</a>
-      <a class="btn btn-ghost" href="index.html">별빛연구소 홈</a>
+      <a class="btn btn-gold" href="/tools/planet-quiz">24문항 탐구 시작</a>
+      <a class="btn btn-ghost" href="/">별빛연구소 홈</a>
     </div>
     <p class="disclaimer planet-disclaimer">${copy.disclaimer}</p>
   `;

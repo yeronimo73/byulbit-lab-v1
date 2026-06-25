@@ -1,5 +1,5 @@
 const SITE = {
-  url: 'https://byulbit-lab-v1.vercel.app',
+  url: 'https://starlightlab.org',
   name: '별빛연구소',
   ogImage: '/assets/hero-poster.jpeg',
 };

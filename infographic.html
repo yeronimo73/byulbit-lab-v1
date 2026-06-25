@@ -7,19 +7,19 @@
   <!-- seo -->
   <meta name="description" content="행성 거울, 달빛 일지, 유성우, 춘분·추분, 우주 달력. 천문 맥락과 심리 질문 한 장 카드." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://byulbit-lab-v1.vercel.app/infographic.html" />
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://byulbit-lab-v1.vercel.app/sitemap.xml" />
+  <link rel="canonical" href="https://starlightlab.org/infographic" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://starlightlab.org/sitemap.xml" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="별빛연구소" />
   <meta property="og:locale" content="ko_KR" />
   <meta property="og:title" content="별빛 인포그래픽 | 별빛연구소" />
   <meta property="og:description" content="행성 거울, 달빛 일지, 유성우, 춘분·추분, 우주 달력. 천문 맥락과 심리 질문 한 장 카드." />
-  <meta property="og:url" content="https://byulbit-lab-v1.vercel.app/infographic.html" />
-  <meta property="og:image" content="https://byulbit-lab-v1.vercel.app/assets/hero-poster.jpeg" />
+  <meta property="og:url" content="https://starlightlab.org/infographic" />
+  <meta property="og:image" content="https://starlightlab.org/assets/hero-poster.jpeg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="별빛 인포그래픽 | 별빛연구소" />
   <meta name="twitter:description" content="행성 거울, 달빛 일지, 유성우, 춘분·추분, 우주 달력. 천문 맥락과 심리 질문 한 장 카드." />
-  <meta name="twitter:image" content="https://byulbit-lab-v1.vercel.app/assets/hero-poster.jpeg" />
+  <meta name="twitter:image" content="https://starlightlab.org/assets/hero-poster.jpeg" />
   <!-- /seo -->
   <title>별빛 인포그래픽 | 별빛연구소</title>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet" />
@@ -32,8 +32,8 @@
   <div class="noise-overlay" aria-hidden="true"></div>
   <header class="site-header">
     <div class="shell header-row">
-      <a class="brand" href="index.html">별빛<span>연구소</span></a>
-      <a class="btn btn-ghost" href="index.html#info" style="min-height:2.25rem;font-size:0.75rem;">← 목록</a>
+      <a class="brand" href="/">별빛<span>연구소</span></a>
+      <a class="btn btn-ghost" href="/#info" style="min-height:2.25rem;font-size:0.75rem;">← 목록</a>
     </div>
   </header>
   <main class="shell tool-page sign-detail" id="content"></main>
@@ -65,11 +65,11 @@
     applyPageSEO({
       title: `${item.title} | 별빛연구소`,
       description: item.teaser,
-      path: `/infographic.html?id=${item.id}`,
+      path: `/infographic?id=${item.id}`,
       jsonLd: articleJsonLd({
         headline: item.title,
         description: item.teaser,
-        path: `/infographic.html?id=${item.id}`,
+        path: `/infographic?id=${item.id}`,
         datePublished: item.date || '2026-06-07',
       }),
     });
@@ -90,8 +90,8 @@
         : `<div style="margin:1.25rem 0;">${renderInfographicPoster(item, details[item.id])}</div>`;
       const quizCta = quiz
         ? `<div class="tool-actions" style="margin-top:1.25rem;">
-            <a class="btn btn-gold" href="tools/${quiz.slug}.html">${quiz.title}</a>
-            <a class="btn btn-ghost" href="tools/knowledge.html">지식 퀴즈 목록</a>
+            <a class="btn btn-gold" href="/tools/${quiz.slug}">${quiz.title}</a>
+            <a class="btn btn-ghost" href="/tools/knowledge">지식 퀴즈 목록</a>
           </div>`
         : '';
 

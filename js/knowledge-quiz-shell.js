@@ -168,7 +168,7 @@ export async function runKnowledgeQuiz({ dataPath, rootId = 'app' }) {
       const signLinks = (data.meta.relatedSigns || [])
         .map(
           (id) =>
-            `<a class="btn btn-ghost" href="../sign.html?id=${id}">${labels[id] || SIGN_NAMES[id] || id} 탐구</a>`
+            `<a class="btn btn-ghost" href="/sign?id=${id}">${labels[id] || SIGN_NAMES[id] || id} 탐구</a>`
         )
         .join('');
 
@@ -195,9 +195,9 @@ export async function runKnowledgeQuiz({ dataPath, rootId = 'app' }) {
           <h3>인포그래픽에서 이어가기</h3>
           ${renderResultEmbed(infoItem, detail)}
           <div class="tool-actions" style="margin-top:1rem;">
-            <a class="btn btn-gold" href="../infographic.html?id=${data.meta.infographicId}">전체 인포그래픽 보기</a>
+            <a class="btn btn-gold" href="/infographic?id=${data.meta.infographicId}">전체 인포그래픽 보기</a>
             ${signLinks}
-            <a class="btn btn-ghost" href="knowledge.html">지식 퀴즈 목록</a>
+            <a class="btn btn-ghost" href="/knowledge">지식 퀴즈 목록</a>
             <button type="button" class="btn btn-ghost" id="retry">다시 풀기</button>
           </div>
         </div>

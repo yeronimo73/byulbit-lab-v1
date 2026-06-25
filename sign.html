@@ -7,19 +7,19 @@
   <!-- seo -->
   <meta name="description" content="황도 12별자리 신화, 심리 질문, 하늘 관측, 색 이야기. 별빛연구소 별자리 상세." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://byulbit-lab-v1.vercel.app/sign.html" />
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://byulbit-lab-v1.vercel.app/sitemap.xml" />
+  <link rel="canonical" href="https://starlightlab.org/sign" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://starlightlab.org/sitemap.xml" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="별빛연구소" />
   <meta property="og:locale" content="ko_KR" />
   <meta property="og:title" content="12별자리 이야기 | 별빛연구소" />
   <meta property="og:description" content="황도 12별자리 신화, 심리 질문, 하늘 관측, 색 이야기. 별빛연구소 별자리 상세." />
-  <meta property="og:url" content="https://byulbit-lab-v1.vercel.app/sign.html" />
-  <meta property="og:image" content="https://byulbit-lab-v1.vercel.app/assets/hero-poster.jpeg" />
+  <meta property="og:url" content="https://starlightlab.org/sign" />
+  <meta property="og:image" content="https://starlightlab.org/assets/hero-poster.jpeg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="12별자리 이야기 | 별빛연구소" />
   <meta name="twitter:description" content="황도 12별자리 신화, 심리 질문, 하늘 관측, 색 이야기. 별빛연구소 별자리 상세." />
-  <meta name="twitter:image" content="https://byulbit-lab-v1.vercel.app/assets/hero-poster.jpeg" />
+  <meta name="twitter:image" content="https://starlightlab.org/assets/hero-poster.jpeg" />
   <!-- /seo -->
   <title>12별자리 이야기 | 별빛연구소</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,8 +34,8 @@
 
   <header class="site-header">
     <div class="shell header-row">
-      <a class="brand" href="index.html">별빛<span>연구소</span></a>
-      <a class="btn btn-ghost" href="index.html#signs" style="min-height:2.25rem;font-size:0.75rem;">← 12별자리</a>
+      <a class="brand" href="/">별빛<span>연구소</span></a>
+      <a class="btn btn-ghost" href="/#signs" style="min-height:2.25rem;font-size:0.75rem;">← 12별자리</a>
     </div>
   </header>
 
@@ -72,7 +72,7 @@
         ${sign.colorAssociation ? `<h3>연상</h3><p>${sign.colorAssociation}</p>` : ''}
         ${sign.colorContext ? `<h3>맥락</h3><p>${sign.colorContext}</p>` : ''}
         ${sign.colorPractice ? `<h3>짧은 실습</h3><p>${sign.colorPractice}</p>` : ''}
-        <p class="sign-atlas-link"><a class="btn btn-ghost" href="color-atlas.html#${sign.id}" style="--sign-color:${sign.color}">황도 12색 아틀라스에서 ${sign.nameKo} swatch 보기</a></p>
+        <p class="sign-atlas-link"><a class="btn btn-ghost" href="/color-atlas#${sign.id}" style="--sign-color:${sign.color}">황도 12색 아틀라스에서 ${sign.nameKo} swatch 보기</a></p>
         ${sign.sources?.length ? `
           <p class="sign-sources">참고: ${sign.sources.map((s) =>
             s.url ? `<a href="${s.url}" rel="noopener noreferrer">${s.label}</a>` : s.label
@@ -87,11 +87,11 @@
     applyPageSEO({
       title: `${sign.nameKo} | 별빛연구소`,
       description: sign.summary,
-      path: `/sign.html?id=${sign.id}`,
+      path: `/sign?id=${sign.id}`,
       jsonLd: articleJsonLd({
         headline: `${sign.nameKo} (${sign.nameEn})`,
         description: sign.summary,
-        path: `/sign.html?id=${sign.id}`,
+        path: `/sign?id=${sign.id}`,
         datePublished: '2026-06-07',
       }),
     });
@@ -145,7 +145,7 @@
       <h2>성격 탐구와의 울림</h2>
       <p class="sign-echo">${sign.mbtiEcho || ''}</p>
 
-      <p style="margin-top:1.5rem;"><a class="btn btn-ghost" href="index.html#signs">목록으로</a></p>
+      <p style="margin-top:1.5rem;"><a class="btn btn-ghost" href="/#signs">목록으로</a></p>
       <p class="disclaimer">별자리는 예언이 아닙니다 · 자기이해를 위한 탐구 거울입니다.</p>
     `;
   </script>

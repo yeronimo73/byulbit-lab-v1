@@ -109,7 +109,7 @@ async function main() {
         .join('');
 
       const signLinks = [..new Set([..(p1.relatedSigns || []), ..(p2.relatedSigns || [])])]
-        .map((id) => `<a class="btn btn-ghost" href="./sign.html?id=${id}">${SIGN_NAMES[id] || id}</a>`)
+        .map((id) => `<a class="btn btn-ghost" href="/sign?id=${id}">${SIGN_NAMES[id] || id}</a>`)
         .join('');
 
       const questions = [..(p1.exploreQuestions || []), ..(p2.exploreQuestions || [])]
@@ -152,8 +152,8 @@ async function main() {
         ${renderExploreJournalHTML({ tool: '행성 거울', resultLabel })}
         <div class="tool-actions">
           ${signLinks}
-          <a class="btn btn-ghost" href="mbti.html">MBTI 탐구</a>
-          <a class="btn btn-ghost" href="enneagram.html">에니어그램</a>
+          <a class="btn btn-ghost" href="/mbti">MBTI 탐구</a>
+          <a class="btn btn-ghost" href="/enneagram">에니어그램</a>
           <button type="button" class="btn btn-ghost" id="retry">전항목 다시 선택하기</button>
         </div>
         <p class="disclaimer">${data.disclaimer} MBTI·별자리와의 교차는 울림일 뿐, 일치를 의미하지 않습니다.</p>

@@ -32,7 +32,7 @@ export function initNav() {
 }
 
 export function initPopup() {
-  const KEY = 'byulbit_v1_popup';
+  const KEY = 'byulbit_v1_popup_20260707';
   const popup = document.getElementById('seminar-popup');
   const backdrop = document.getElementById('popup-backdrop');
   if (!popup || !backdrop) return;
@@ -53,6 +53,9 @@ export function initPopup() {
 
   document.getElementById('popup-close')?.addEventListener('click', () => setOpen(false));
   backdrop.addEventListener('click', () => setOpen(false));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && popup.classList.contains('is-open')) setOpen(false);
+  });
   document.getElementById('popup-today')?.addEventListener('click', () => {
     try {
       const end = new Date();
@@ -71,7 +74,7 @@ export function renderSignCards(signs, container) {
       ? `<img src="${s.thumb}" alt="${s.nameKo} 썸네일" loading="lazy" />`
       : signIconMarkup(s.id, s.color);
     return `
-    <a class="card sign-card" href="sign.html?id=${s.id}" style="--accent:${s.color}">
+    <a class="card sign-card" href="/sign?id=${s.id}" style="--accent:${s.color}">
       <div class="thumb thumb--img sign-card__thumb">${thumbInner}</div>
       <div class="card-top">
         <span class="card-sym" aria-hidden="true">${signIconMarkup(s.id, s.color)}</span>
@@ -99,20 +102,20 @@ export function renderInfographics(items, details, container, quizByInfoId = {})
       : renderInfographicPoster(item, details[item.id], { compact: true });
     const quiz = quizByInfoId[item.id];
     const quizLink = quiz
-      ? `<a class="info-card__quiz" href="tools/${quiz.slug}.html">지식 퀴즈</a>`
+      ? `<a class="info-card__quiz" href="/tools/${quiz.slug}">지식 퀴즈</a>`
       : item.quizSlug
-        ? `<a class="info-card__quiz" href="tools/${item.quizSlug}.html">탐구 시작</a>`
+        ? `<a class="info-card__quiz" href="/tools/${item.quizSlug}">탐구 시작</a>`
         : '';
     return `
     <article class="card info-card">
-      <a class="info-card__main" href="infographic.html?id=${item.id}">
+      <a class="info-card__main" href="/infographic?id=${item.id}">
         <div class="thumb thumb--img">${thumbInner}</div>
         <div class="card-period">${item.date}</div>
         <h3>${item.title}</h3>
         <p>${item.teaser}</p>
       </a>
       <div class="info-card__actions">
-        <a class="card-more" href="infographic.html?id=${item.id}">인포그래픽 보기</a>
+        <a class="card-more" href="/infographic?id=${item.id}">인포그래픽 보기</a>
         ${quizLink}
       </div>
     </article>`;

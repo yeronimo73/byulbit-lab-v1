@@ -32,16 +32,25 @@
     {
       "heading": "아틀라스와 별자리 페이지",
       "paragraphs": [
-        "`color-atlas.html`에서 12 swatch·HSL·면책을 한눈에 볼 수 있습니다.",
-        "각 `sign.html`의 빛·색채 섹션은 아틀라스 hue를 전제로 10초 실습(`colorPractice`)을 제안합니다."
+        "`/color-atlas`에서 12 swatch·HSL·면책을 한눈에 볼 수 있습니다.",
+        "각 `/sign`의 빛·색채 섹션은 아틀라스 hue를 전제로 10초 실습(`colorPractice`)을 제안합니다."
       ]
     }
   ],
   "practice": "황도 12색 아틀라스에서 자신의 생일 별자리 swatch를 10초 바라본 뒤, 「이 hue가 떠올리게 하는 단어」와 「오늘 실제 기분 단어」를 적어 보세요. 디자인 연상과 그날의 체감을 나란히 두는 연습입니다.",
   "related": [
-    { "label": "황도 12색 아틀라스", "href": "color-atlas.html" },
-    { "label": "연구 노트, 별빛의 색", "href": "research-note.html?id=stellar-color" },
-    { "label": "12별자리 목록", "href": "index.html#signs" }
+    {
+      "label": "황도 12색 아틀라스",
+      "href": "/color-atlas"
+    },
+    {
+      "label": "연구 노트, 별빛의 색",
+      "href": "/research-note?id=stellar-color"
+    },
+    {
+      "label": "12별자리 목록",
+      "href": "/#signs"
+    }
   ],
   "sources": [
     {

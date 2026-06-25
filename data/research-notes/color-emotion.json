@@ -38,8 +38,14 @@
   ],
   "practice": "지금 화면이나 주변에서 아무 색이나 10초 바라본 뒤, 「이 색이 떠올리게 하는 단어 하나」와 「지금 실제로 느끼는 감정 하나」를 각각 적어 보세요. 두 문장이 다르면, 그 차이가 바로 연상과 체감의 거리입니다.",
   "related": [
-    { "label": "쌍둥이자리 · 빛·색채", "href": "sign.html?id=gemini" },
-    { "label": "연구 허브 · 참고문헌", "href": "research.html#bib-heading" }
+    {
+      "label": "쌍둥이자리 · 빛·색채",
+      "href": "/sign?id=gemini"
+    },
+    {
+      "label": "연구 허브 · 참고문헌",
+      "href": "/research#bib-heading"
+    }
   ],
   "sources": [
     {

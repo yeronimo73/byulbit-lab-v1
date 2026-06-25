@@ -21,7 +21,7 @@ export function resolveQuizVisual(item, quizMeta, catalogById) {
       srcset: v.srcset,
       alt: v.alt || info.title,
       caption: v.caption || '',
-      href: `../infographic.html?id=${infoId}`,
+      href: `/infographic?id=${infoId}`,
       accent: info.color,
     };
   }
@@ -32,7 +32,7 @@ export function resolveQuizVisual(item, quizMeta, catalogById) {
       src: info.thumb,
       alt: `${info.title} 썸네일`,
       caption: v.caption || '',
-      href: `../infographic.html?id=${infoId}`,
+      href: `/infographic?id=${infoId}`,
       accent: info.color,
     };
   }

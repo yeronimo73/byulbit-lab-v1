@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://byulbit-lab-v1.vercel.app/sitemap.xml
+Sitemap: https://starlightlab.org/sitemap.xml
 
 # GEO/AEO: 요약·정책
-# https://byulbit-lab-v1.vercel.app/llms.txt
+# https://starlightlab.org/llms.txt

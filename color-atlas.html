@@ -7,19 +7,19 @@
   <!-- seo -->
   <meta name="description" content="12별자리 hue, hex, HSL, 원소. 천문 실측색과 디자인 상징색 분리 레퍼런스." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://byulbit-lab-v1.vercel.app/color-atlas.html" />
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://byulbit-lab-v1.vercel.app/sitemap.xml" />
+  <link rel="canonical" href="https://starlightlab.org/color-atlas" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://starlightlab.org/sitemap.xml" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="별빛연구소" />
   <meta property="og:locale" content="ko_KR" />
   <meta property="og:title" content="황도 12색 아틀라스 | 별빛연구소" />
   <meta property="og:description" content="12별자리 hue, hex, HSL, 원소. 천문 실측색과 디자인 상징색 분리 레퍼런스." />
-  <meta property="og:url" content="https://byulbit-lab-v1.vercel.app/color-atlas.html" />
-  <meta property="og:image" content="https://byulbit-lab-v1.vercel.app/assets/hero-poster.jpeg" />
+  <meta property="og:url" content="https://starlightlab.org/color-atlas" />
+  <meta property="og:image" content="https://starlightlab.org/assets/hero-poster.jpeg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="황도 12색 아틀라스 | 별빛연구소" />
   <meta name="twitter:description" content="12별자리 hue, hex, HSL, 원소. 천문 실측색과 디자인 상징색 분리 레퍼런스." />
-  <meta name="twitter:image" content="https://byulbit-lab-v1.vercel.app/assets/hero-poster.jpeg" />
+  <meta name="twitter:image" content="https://starlightlab.org/assets/hero-poster.jpeg" />
   <!-- /seo -->
   <title>황도 12색 아틀라스 | 별빛연구소</title>  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,8 +33,8 @@
 
   <header class="site-header">
     <div class="shell header-row">
-      <a class="brand" href="index.html">별빛<span>연구소</span></a>
-      <a class="btn btn-ghost" href="research.html" style="min-height:2.25rem;font-size:0.75rem;">← 연구 허브</a>
+      <a class="brand" href="/">별빛<span>연구소</span></a>
+      <a class="btn btn-ghost" href="/research" style="min-height:2.25rem;font-size:0.75rem;">← 연구 허브</a>
     </div>
   </header>
 
@@ -45,8 +45,8 @@
     <p class="research-bib-note" id="atlas-disclaimer"></p>
     <ul class="color-atlas-notes" id="atlas-global-notes"></ul>
     <div class="color-atlas-grid" id="atlas-grid"></div>
-    <p style="margin-top:1.25rem;"><a class="btn btn-ghost" href="research-note.html?id=zodiac-hues">디자인 노트 읽기</a></p>
-    <p style="margin-top:0.75rem;"><a class="btn btn-ghost" href="research.html">연구 허브로</a></p>
+    <p style="margin-top:1.25rem;"><a class="btn btn-ghost" href="/research-note?id=zodiac-hues">디자인 노트 읽기</a></p>
+    <p style="margin-top:0.75rem;"><a class="btn btn-ghost" href="/research">연구 허브로</a></p>
     <p class="disclaimer" id="atlas-foot"></p>
   </main>
 
@@ -81,7 +81,7 @@
             <div class="color-atlas-card__swatch" aria-hidden="true"></div>
             <div class="color-atlas-card__body">
               <header class="color-atlas-card__head">
-                <h2><a href="sign.html?id=${s.signId}">${s.nameKo}</a></h2>
+                <h2><a href="/sign?id=${s.signId}">${s.nameKo}</a></h2>
                 <span class="color-atlas-card__element">${ELEMENT_LABEL[s.element] || s.element}</span>
               </header>
               <p class="color-atlas-card__hex">${s.hex} · ${hsl}</p>

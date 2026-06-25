@@ -53,7 +53,7 @@ export function renderIntroPanel(infoItem, detail, disclaimer) {
       <p class="disclaimer" style="margin-top:0.75rem;border:none;padding:0;">${disclaimer}</p>
       <div class="tool-actions">
         <button type="button" class="btn btn-gold" id="quiz-start">탐구 시작</button>
-        <a class="btn btn-ghost" href="../infographic.html?id=${infoItem.id}">한 장 카드 먼저 보기</a>
+        <a class="btn btn-ghost" href="/infographic?id=${infoItem.id}">한 장 카드 먼저 보기</a>
       </div>
     </div>`;
 }

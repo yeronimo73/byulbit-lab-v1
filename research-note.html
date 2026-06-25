@@ -7,19 +7,19 @@
   <!-- seo -->
   <meta name="description" content="색과 감정, 별빛 스펙트럼, 달빛, 황도 12색 등 짧은 리서치 노트와 탐구 실습." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://byulbit-lab-v1.vercel.app/research-note.html" />
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://byulbit-lab-v1.vercel.app/sitemap.xml" />
+  <link rel="canonical" href="https://starlightlab.org/research-note" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://starlightlab.org/sitemap.xml" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="별빛연구소" />
   <meta property="og:locale" content="ko_KR" />
   <meta property="og:title" content="연구 노트 | 별빛연구소" />
   <meta property="og:description" content="색과 감정, 별빛 스펙트럼, 달빛, 황도 12색 등 짧은 리서치 노트와 탐구 실습." />
-  <meta property="og:url" content="https://byulbit-lab-v1.vercel.app/research-note.html" />
-  <meta property="og:image" content="https://byulbit-lab-v1.vercel.app/assets/hero-poster.jpeg" />
+  <meta property="og:url" content="https://starlightlab.org/research-note" />
+  <meta property="og:image" content="https://starlightlab.org/assets/hero-poster.jpeg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="연구 노트 | 별빛연구소" />
   <meta name="twitter:description" content="색과 감정, 별빛 스펙트럼, 달빛, 황도 12색 등 짧은 리서치 노트와 탐구 실습." />
-  <meta name="twitter:image" content="https://byulbit-lab-v1.vercel.app/assets/hero-poster.jpeg" />
+  <meta name="twitter:image" content="https://starlightlab.org/assets/hero-poster.jpeg" />
   <!-- /seo -->
   <title>연구 노트 | 별빛연구소</title>  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,8 +33,8 @@
 
   <header class="site-header">
     <div class="shell header-row">
-      <a class="brand" href="index.html">별빛<span>연구소</span></a>
-      <a class="btn btn-ghost" href="research.html" style="min-height:2.25rem;font-size:0.75rem;">← 연구 허브</a>
+      <a class="brand" href="/">별빛<span>연구소</span></a>
+      <a class="btn btn-ghost" href="/research" style="min-height:2.25rem;font-size:0.75rem;">← 연구 허브</a>
     </div>
   </header>
 
@@ -58,18 +58,18 @@
       document.getElementById('note-root').innerHTML = `
         <p class="section-label">Research Note</p>
         <h1>노트를 찾을 수 없습니다</h1>
-        <p><a class="btn btn-ghost" href="research.html">연구 허브로</a></p>`;
+        <p><a class="btn btn-ghost" href="/research">연구 허브로</a></p>`;
       throw new Error('note not found');
     }
 
     applyPageSEO({
       title: `${note.title} | 별빛연구소`,
       description: note.lead,
-      path: `/research-note.html?id=${id}`,
+      path: `/research-note?id=${id}`,
       jsonLd: articleJsonLd({
         headline: note.title,
         description: note.lead,
-        path: `/research-note.html?id=${id}`,
+        path: `/research-note?id=${id}`,
         datePublished: note.date || '2026-06-07',
       }),
     });
@@ -104,7 +104,7 @@
       </aside>
       ${related}
       ${sources}
-      <p style="margin-top:1.5rem;"><a class="btn btn-ghost" href="research.html">연구 허브로</a></p>
+      <p style="margin-top:1.5rem;"><a class="btn btn-ghost" href="/research">연구 허브로</a></p>
       <p class="disclaimer">별빛연구소 · 비영리 천체·심리 연구 · 운세·단정이 아닌 탐구 거울</p>
     `;
   </script>

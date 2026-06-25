@@ -5,26 +5,26 @@ from pathlib import Path
 from xml.etree.ElementTree import Element, SubElement, tostring
 
 ROOT = Path(__file__).resolve().parent.parent
-BASE = "https://byulbit-lab-v1.vercel.app"
-LASTMOD = "2026-06-07"
+BASE = "https://starlightlab.org"
+LASTMOD = "2026-06-15"
 
+# cleanUrls: true — sitemap must list canonical paths (no .html)
 STATIC = [
     "/",
-    "/index.html",
-    "/research.html",
-    "/sky.html",
-    "/color-atlas.html",
-    "/research-note.html",
-    "/sign.html",
-    "/infographic.html",
-    "/tools/mbti.html",
-    "/tools/enneagram.html",
-    "/tools/planet-quiz.html",
-    "/tools/knowledge.html",
-    "/tools/full-moon-quiz.html",
-    "/tools/equinox-quiz.html",
-    "/tools/universe-year-quiz.html",
-    "/tools/meteor-quiz.html",
+    "/research",
+    "/sky",
+    "/color-atlas",
+    "/research-note",
+    "/sign",
+    "/infographic",
+    "/tools/mbti",
+    "/tools/enneagram",
+    "/tools/planet-quiz",
+    "/tools/knowledge",
+    "/tools/full-moon-quiz",
+    "/tools/equinox-quiz",
+    "/tools/universe-year-quiz",
+    "/tools/meteor-quiz",
     "/llms.txt",
 ]
 
@@ -38,13 +38,13 @@ def main():
 
     signs = load_json("data/signs.json")["signs"]
     for s in signs:
-        urls.append(f"/sign.html?id={s['id']}")
+        urls.append(f"/sign?id={s['id']}")
 
     for item in load_json("data/infographics.json")["items"]:
-        urls.append(f"/infographic.html?id={item['id']}")
+        urls.append(f"/infographic?id={item['id']}")
 
     for note in load_json("data/research-notes/index.json")["notes"]:
-        urls.append(f"/research-note.html?id={note['id']}")
+        urls.append(f"/research-note?id={note['id']}")
 
     urlset = Element("urlset", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
     seen = set()
@@ -59,7 +59,7 @@ def main():
         if path.startswith("/tools/") or "quiz" in path:
             SubElement(u, "changefreq").text = "monthly"
             SubElement(u, "priority").text = "0.6"
-        elif "sign.html" in path or "infographic" in path or "research-note" in path:
+        elif path.startswith("/sign") or path.startswith("/infographic") or path.startswith("/research-note"):
             SubElement(u, "changefreq").text = "weekly"
             SubElement(u, "priority").text = "0.8"
         else:

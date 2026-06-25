@@ -6,14 +6,18 @@
   "globalNotes": [
     "HSL은 sRGB hex 기준 근사값입니다.",
     "원소(불·흙·공기·물)는 점술 원소가 아니라 사이트 상징 분류입니다.",
-    "상세 해석·실습은 각 sign.html 빛·색채 섹션을 참고하세요."
+    "상세 해석·실습은 각 /sign 빛·색채 섹션을 참고하세요."
   ],
   "swatches": [
     {
       "signId": "aries",
       "nameKo": "양자리",
       "hex": "#e85d4a",
-      "hsl": { "h": 7, "s": 77, "l": 60 },
+      "hsl": {
+        "h": 7,
+        "s": 77,
+        "l": 60
+      },
       "element": "불",
       "role": "시작·열기·각성",
       "astronomyBridge": "하말(α Ari)은 실제 황색 거성, 「붉은 불꽃」은 문화·디자인 이미지"
@@ -22,7 +26,11 @@
       "signId": "taurus",
       "nameKo": "황소자리",
       "hex": "#6ec894",
-      "hsl": { "h": 145, "s": 45, "l": 61 },
+      "hsl": {
+        "h": 145,
+        "s": 45,
+        "l": 61
+      },
       "element": "흙",
       "role": "안정·대지·성장",
       "astronomyBridge": "알데바란은 붉은 거성, 「녹색 대지」는 상징 hue"
@@ -31,7 +39,11 @@
       "signId": "gemini",
       "nameKo": "쌍둥이자리",
       "hex": "#6ec8c8",
-      "hsl": { "h": 180, "s": 45, "l": 61 },
+      "hsl": {
+        "h": 180,
+        "s": 45,
+        "l": 61
+      },
       "element": "공기",
       "role": "대화·바람·이중성",
       "astronomyBridge": "폴룩스(따뜻)·카스토르(상대적 푸름), 두 빛이 나란히"
@@ -40,7 +52,11 @@
       "signId": "cancer",
       "nameKo": "게자리",
       "hex": "#9bafd4",
-      "hsl": { "h": 219, "s": 40, "l": 72 },
+      "hsl": {
+        "h": 219,
+        "s": 40,
+        "l": 72
+      },
       "element": "물",
       "role": "달빛·보호·소속",
       "astronomyBridge": "달빛은 태양 반사광, 은청색은 지각·대기 합성"
@@ -49,7 +65,11 @@
       "signId": "leo",
       "nameKo": "사자자리",
       "hex": "#ffd84d",
-      "hsl": { "h": 47, "s": 100, "l": 65 },
+      "hsl": {
+        "h": 47,
+        "s": 100,
+        "l": 65
+      },
       "element": "불",
       "role": "표현·존재감·태양",
       "astronomyBridge": "레굴루스는 청백색 별, 「금빛 사자」는 상징"
@@ -58,7 +78,11 @@
       "signId": "virgo",
       "nameKo": "처녀자리",
       "hex": "#b8c89a",
-      "hsl": { "h": 81, "s": 29, "l": 69 },
+      "hsl": {
+        "h": 81,
+        "s": 29,
+        "l": 69
+      },
       "element": "흙",
       "role": "정리·수확·집중",
       "astronomyBridge": "스피카는 청백색 1등성, 「올리브 들판」은 상징"
@@ -67,7 +91,11 @@
       "signId": "libra",
       "nameKo": "천칭자리",
       "hex": "#d4a8c8",
-      "hsl": { "h": 316, "s": 34, "l": 75 },
+      "hsl": {
+        "h": 316,
+        "s": 34,
+        "l": 75
+      },
       "element": "공기",
       "role": "균형·관계·조율",
       "astronomyBridge": "추분 시즌과 문화적 연결, 저울 별은 스펙트럼 다양"
@@ -76,7 +104,11 @@
       "signId": "scorpio",
       "nameKo": "전갈자리",
       "hex": "#9b4a6c",
-      "hsl": { "h": 335, "s": 35, "l": 45 },
+      "hsl": {
+        "h": 335,
+        "s": 35,
+        "l": 45
+      },
       "element": "물",
       "role": "깊이·변환·진실",
       "astronomyBridge": "안타레스 붉은 초거성, 자주 hue와 천문색 맞닿음"
@@ -85,7 +117,11 @@
       "signId": "sagittarius",
       "nameKo": "사수자리",
       "hex": "#c47a3a",
-      "hsl": { "h": 28, "s": 54, "l": 50 },
+      "hsl": {
+        "h": 28,
+        "s": 54,
+        "l": 50
+      },
       "element": "불",
       "role": "탐험·지평선·의미",
       "astronomyBridge": "은하수 중심 방향, 밤하늘 밝기는 관측 조건 의존"
@@ -94,7 +130,11 @@
       "signId": "capricorn",
       "nameKo": "염소자리",
       "hex": "#7a8a9a",
-      "hsl": { "h": 210, "s": 14, "l": 54 },
+      "hsl": {
+        "h": 210,
+        "s": 14,
+        "l": 54
+      },
       "element": "흙",
       "role": "구조·인내·산악",
       "astronomyBridge": "희미한 별자리, 회청은 차분·현실감 상징"
@@ -103,7 +143,11 @@
       "signId": "aquarius",
       "nameKo": "물병자리",
       "hex": "#5ab8d4",
-      "hsl": { "h": 194, "s": 59, "l": 59 },
+      "hsl": {
+        "h": 194,
+        "s": 59,
+        "l": 59
+      },
       "element": "공기",
       "role": "연결·나눔·혁신",
       "astronomyBridge": "「물병」 신화 이름, 사이트는 공기 원소 hue"
@@ -112,7 +156,11 @@
       "signId": "pisces",
       "nameKo": "물고기자리",
       "hex": "#8a9bd4",
-      "hsl": { "h": 226, "s": 46, "l": 69 },
+      "hsl": {
+        "h": 226,
+        "s": 46,
+        "l": 69
+      },
       "element": "물",
       "role": "공감·상상·융합",
       "astronomyBridge": "황혼·바다 연상, 연보라는 지각·디자인 합성"

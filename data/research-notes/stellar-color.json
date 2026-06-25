@@ -38,9 +38,18 @@
   ],
   "practice": "오늘 밤(또는 별 사진)에서 가장 밝은 별 하나를 골라 10초 바라본 뒤, 「겉보기 색(따뜻/차가움)」과 「그 별이 떠올리게 하는 단어」를 각각 적어 보세요. 천문 사실과 연상을 분리하는 연습입니다.",
   "related": [
-    { "label": "사자자리 · 별·천문 (레굴루스)", "href": "sign.html?id=leo" },
-    { "label": "2026 관측 달력", "href": "sky.html" },
-    { "label": "연구 노트, 색은 감정을 바꾸는가?", "href": "research-note.html?id=color-emotion" }
+    {
+      "label": "사자자리 · 별·천문 (레굴루스)",
+      "href": "/sign?id=leo"
+    },
+    {
+      "label": "2026 관측 달력",
+      "href": "/sky"
+    },
+    {
+      "label": "연구 노트, 색은 감정을 바꾸는가?",
+      "href": "/research-note?id=color-emotion"
+    }
   ],
   "sources": [
     {

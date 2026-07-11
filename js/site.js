@@ -32,7 +32,7 @@ export function initNav() {
 }
 
 export function initPopup() {
-  const KEY = 'byulbit_v1_popup_20260707';
+  const KEY = 'byulbit_v1_popup_20260714';
   const popup = document.getElementById('seminar-popup');
   const backdrop = document.getElementById('popup-backdrop');
   if (!popup || !backdrop) return;

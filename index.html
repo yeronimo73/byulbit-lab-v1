@@ -48,10 +48,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/site.css?v=home-20260723" />
   <link rel="stylesheet" href="css/infographic-poster.css" />
+  <link rel="stylesheet" href="css/home.css?v=home-20260723" />
 </head>
-<body>
+<body class="page-home">
   <div id="star-canvas" aria-hidden="true"></div>
   <div class="ambient-glow" aria-hidden="true"></div>
   <div class="noise-overlay" aria-hidden="true"></div>
@@ -61,13 +62,10 @@
       <a class="brand" href="/">별빛<span>연구소</span></a>
       <nav aria-label="주 메뉴">
         <ul class="nav-desktop">
-          <li><a href="#about">연구소</a></li>
-          <li><a href="/research">연구허브</a></li>
-          <li><a href="#month">이달의 별자리</a></li>
-          <li><a href="#signs">12별자리</a></li>
-          <li><a href="#info">인포그래픽</a></li>
-          <li><a href="/tools/mbti">MBTI</a></li>
-          <li><a href="/tools/enneagram">에니어그램</a></li>
+          <li><a href="#signs">별자리</a></li>
+          <li><a href="#explore">탐구</a></li>
+          <li><a href="/research">연구</a></li>
+          <li><a href="/sky">하늘</a></li>
         </ul>
       </nav>
       <button type="button" class="nav-toggle" id="nav-toggle" aria-label="메뉴" aria-expanded="false" aria-controls="nav-drawer">☰</button>
@@ -76,49 +74,78 @@
 
   <nav class="nav-drawer" id="nav-drawer" aria-label="모바일 메뉴">
     <ul>
-      <li><a href="#about">연구소</a></li>
-      <li><a href="/research">연구허브</a></li>
       <li><a href="#month">이달의 별자리</a></li>
+      <li><a href="#explore">탐구 도구</a></li>
       <li><a href="#signs">12별자리</a></li>
       <li><a href="#info">인포그래픽</a></li>
+      <li><a href="#about">연구소</a></li>
+      <li><a href="/research">연구 허브</a></li>
+      <li><a href="/sky">연간 하늘 달력</a></li>
+      <li><a href="/color-atlas">황도 12색 아틀라스</a></li>
       <li><a href="/tools/mbti">MBTI 탐구</a></li>
       <li><a href="/tools/enneagram">에니어그램</a></li>
     </ul>
   </nav>
 
   <main class="shell">
-    <section class="hero" id="month">
-      <p class="hero-eyebrow" id="month-label">이달의 별자리</p>
-      <h1 class="hero-sign"><span id="hero-name">쌍둥이자리</span></h1>
-      <p class="hero-tag" id="hero-tagline">두 개의 목소리, 하나의 대화</p>
-      <p class="hero-about" id="hero-summary">별과 빛, 색으로 마음을 돌아보는 비영리 연구 공간입니다. 별자리는 운세가 아니라 거울입니다.</p>
-      <p class="hero-sky" id="hero-sky" hidden></p>
-      <p style="margin-top:1rem;"><a class="btn btn-ghost" href="#" id="hero-sign-link">이달의 별자리 이야기 읽기</a></p>
+    <section class="home-hero" id="month" aria-labelledby="home-hero-title">
+      <div class="home-hero__copy">
+        <p class="home-hero__eyebrow">별빛연구소 · Starlight Research</p>
+        <h1 class="home-hero__title" id="home-hero-title">별과 빛으로 마음을 돌아봅니다</h1>
+        <p class="home-hero__lead">
+          12별자리 신화·색채·천문과 자기이해 탐구. 운세가 아니라 거울입니다.
+          비영리 연구 공간, 별빛연구소입니다.
+        </p>
+        <div class="home-hero__actions">
+          <a class="btn btn-gold" href="#explore">탐구 시작</a>
+          <a class="btn btn-ghost" href="/research">연구 허브</a>
+        </div>
+      </div>
+
+      <article class="home-feature" id="hero-feature" style="--feature-accent:#6ec8c8">
+        <a class="home-feature__media" id="hero-feature-media" href="#" aria-labelledby="hero-name">
+          <span class="home-feature__badge" id="month-label">이달의 별자리</span>
+        </a>
+        <div class="home-feature__body">
+          <div class="home-feature__meta">
+            <span class="home-chip" id="hero-period">—</span>
+            <span class="home-chip" id="hero-element">—</span>
+          </div>
+          <h2 class="home-feature__name">
+            <a id="hero-sign-link" href="#"><span id="hero-name">별자리</span></a>
+          </h2>
+          <p class="home-feature__tag" id="hero-tagline"></p>
+          <p class="home-feature__summary" id="hero-summary"></p>
+          <p class="home-feature__sky" id="hero-sky" hidden></p>
+          <a class="home-feature__cta" id="hero-sign-link-label" href="#">이달의 별자리 이야기 읽기 →</a>
+        </div>
+      </article>
     </section>
 
-    <section class="section" id="about">
-      <p class="section-label">Starlight Research</p>
-      <h2><span id="about-title">별과 빛을 연구합니다</span></h2>
-      <p class="section-lead">하늘은 배경으로 두고, 색과 질문으로 마음을 돌아보는 비영리 연구 공간입니다.</p>
-      <div class="about-box">
-        <p><strong>별빛연구소</strong>는 12별자리 신화, 색, 하늘 이야기로 자기이해를 돕습니다. 운세나 성격 단정이 아니라, 「지금 나에게 무엇이 울리는가」를 묻습니다.</p>
-        <p><strong>12별자리</strong>: 신화, 심리 질문, 관측 안내, 색 이야기를 한 페이지에서 읽을 수 있습니다. 홈 상단 「이달의 별자리」는 매달 바뀝니다.</p>
-        <p><strong>인포그래픽</strong>: 행성 거울, 달빛 일지, 유성우, 춘분·추분, 우주 달력 등 한 장 카드입니다. 대부분 짧은 퀴즈가 붙어 있습니다.</p>
-        <p><strong>탐구 도구</strong>: MBTI, 에니어그램, 행성 거울 퀴즈로 이어집니다. 공식 검사나 진단을 대신하지 않는 자가탐구입니다.</p>
-        <p><a href="/research" style="color:var(--teal);">연구 허브</a> · <a href="/color-atlas" style="color:var(--teal);">황도 12색 아틀라스</a></p>
-      </div>
-      <div class="tool-banner">
-        <a class="tool-link tool-link--mbti" href="/tools/mbti">
-          <strong><span id="mbti-tool-title">MBTI 탐구</span></strong>
+    <section class="section" id="explore">
+      <p class="section-label">Explore</p>
+      <h2><span id="explore-title">탐구 도구</span></h2>
+      <p class="section-lead">공식 검사·진단을 대신하지 않는 자가탐구입니다. 비율과 질문으로 자신을 비춰 봅니다.</p>
+      <div class="home-explore-grid">
+        <a class="home-tool home-tool--mbti" href="/tools/mbti">
+          <span class="home-tool__kicker">Type</span>
+          <h3 class="home-tool__title"><span id="mbti-tool-title">MBTI 탐구</span></h3>
+          <p class="home-tool__desc">네 축 비율로 선호를 살펴보는 정밀 자가탐구</p>
         </a>
-        <a class="tool-link tool-link--enneagram" href="/tools/enneagram">
-          <strong><span id="enneagram-tool-title">에니어그램</span></strong>
+        <a class="home-tool home-tool--enneagram" href="/tools/enneagram">
+          <span class="home-tool__kicker">Nine</span>
+          <h3 class="home-tool__title"><span id="enneagram-tool-title">에니어그램</span></h3>
+          <p class="home-tool__desc">9유형 비율·wing·tritype 흐름을 읽습니다</p>
         </a>
-        <a class="tool-link tool-link--equinox" href="/tools/knowledge">
-          <strong><span id="equinox-tool-title">인포그래픽 지식 퀴즈</span></strong>
+        <a class="home-tool home-tool--quiz" href="/tools/knowledge">
+          <span class="home-tool__kicker">Quiz</span>
+          <h3 class="home-tool__title"><span id="equinox-tool-title">지식 퀴즈</span></h3>
+          <p class="home-tool__desc">인포그래픽 속 별·빛·계절 지식을 짧게 점검</p>
         </a>
-        <a class="tool-link tool-link--planet" href="/infographic?id=planet-mirror">
-          <strong><span id="planet-tool-title">행성 거울 탐구</span></strong>
+        <a class="home-tool home-tool--planet" href="/infographic?id=planet-mirror">
+          <span class="home-tool__kicker">Mirror</span>
+          <h3 class="home-tool__title"><span id="planet-tool-title">행성 거울</span></h3>
+          <p class="home-tool__desc">행성의 상징을 거울 삼아 오늘의 나를 묻습니다</p>
         </a>
       </div>
     </section>
@@ -133,24 +160,60 @@
     <section class="section" id="info">
       <p class="section-label">Infographics</p>
       <h2><span id="info-title">별빛 인포그래픽</span></h2>
-      <p class="section-lead">별자리·심리·색채를 한 장으로, 하늘은 맥락, 거울은 마음. 자체 제작 탐구 카드입니다.</p>
+      <p class="section-lead">별자리·심리·색채를 한 장으로. 하늘은 맥락, 거울은 마음. 자체 제작 탐구 카드입니다.</p>
       <div class="card-grid" id="info-grid"></div>
+    </section>
+
+    <section class="section" id="about">
+      <p class="section-label">Starlight Research</p>
+      <h2><span id="about-title">별과 빛을 연구합니다</span></h2>
+      <p class="section-lead">하늘은 배경으로 두고, 색과 질문으로 마음을 돌아보는 비영리 연구 공간입니다.</p>
+      <div class="home-about-grid">
+        <article class="home-pillar">
+          <p class="home-pillar__label">별</p>
+          <h3>관측 가능한 하늘</h3>
+          <p>12별자리 신화와 천문 사실을 나란히 둡니다. 이달의 별자리와 연간 달력으로 계절을 읽습니다.</p>
+        </article>
+        <article class="home-pillar">
+          <p class="home-pillar__label">빛</p>
+          <h3>색과 스펙트럼</h3>
+          <p>색채 연상과 황도 12색 아틀라스로, 빛과 마음이 만나는 지점을 탐구합니다.</p>
+        </article>
+        <article class="home-pillar">
+          <p class="home-pillar__label">거울</p>
+          <h3>자기이해 질문</h3>
+          <p>MBTI·에니어그램·행성 거울은 진단이 아닙니다. 「지금 나에게 무엇이 울리는가」를 묻습니다.</p>
+        </article>
+      </div>
+      <div class="home-about-links">
+        <a href="/research">연구 허브</a>
+        <a href="/color-atlas">황도 12색 아틀라스</a>
+        <a href="/sky">연간 하늘 달력</a>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer shell">
-    <p id="footer-text">© 별빛연구소 Starlight Research · 비영리 천체·심리 연구</p>
+    <div class="home-footer">
+      <p id="footer-text">© 별빛연구소 Starlight Research · 비영리 천체·심리 연구</p>
+      <ul class="home-footer__links">
+        <li><a href="/research">연구</a></li>
+        <li><a href="/sky">하늘</a></li>
+        <li><a href="/color-atlas">색 아틀라스</a></li>
+        <li><a href="#explore">탐구</a></li>
+      </ul>
+    </div>
   </footer>
 
   <div class="popup-backdrop" id="popup-backdrop" aria-hidden="true"></div>
   <div class="popup popup--poster" id="seminar-popup" role="dialog" aria-labelledby="popup-title" aria-hidden="true">
     <button type="button" class="popup-close" id="popup-close" aria-label="닫기">×</button>
     <div class="popup-body popup-body--poster">
-      <h2 id="popup-title" class="visually-hidden">나를 찾아가는 별빛 이야기 — 7월 14일 로스팅로보 3층</h2>
+      <h2 id="popup-title" class="visually-hidden">나를 찾아가는 별빛 이야기 — 7월 28일 데시오 3층</h2>
       <img
         class="popup-poster"
-        src="/assets/popup/seminar-2026-07-14.jpeg"
-        alt="나를 찾아가는 별빛 이야기. 7월 14일 화요일 14시, 로스팅로보 3층."
+        src="/assets/popup/seminar-2026-07-28.jpeg"
+        alt="나를 찾아가는 별빛 이야기. 7월 28일 화요일 14시, 데시오 3층 (중구 공평동 82-15)."
         width="1054"
         height="1492"
         loading="eager"
@@ -165,39 +228,77 @@
   </script>
   <script type="module" src="js/bg.js?v=bg-toggle"></script>
   <script type="module">
-    import { loadJson, initNav, initPopup, renderSignCards, renderInfographics } from './js/site.js?v=popup-20260714';
+    import { loadJson, initNav, initPopup, renderSignCards, renderInfographics } from './js/site.js?v=home-20260723';
     import { getCurrentSign, getSkyCalendarEntry } from './js/scoring.js';
     import { applyAnimatedText } from './js/animated-hero-text.js';
     import { applyBubbleText } from './js/bubble-text.js';
+    import { signIconMarkup } from './js/sign-icons.js';
+
     initNav();
     initPopup();
+
     const { signs } = await loadJson('data/signs.json');
     const current = getCurrentSign(signs);
+    const accent = current.color || '#6ec8c8';
+    const signHref = `/sign?id=${current.id}`;
+
+    const feature = document.getElementById('hero-feature');
+    feature.style.setProperty('--feature-accent', accent);
+
+    const media = document.getElementById('hero-feature-media');
+    media.href = signHref;
+    const badge = document.getElementById('month-label');
+    badge.textContent = `${new Date().getMonth() + 1}월 · 이달의 별자리`;
+    [...media.children].forEach((el) => {
+      if (el !== badge) el.remove();
+    });
+    if (current.image || current.thumb) {
+      const img = document.createElement('img');
+      img.src = current.image || current.thumb;
+      img.alt = `${current.nameKo} 이미지`;
+      img.width = 800;
+      img.height = 500;
+      img.loading = 'eager';
+      img.decoding = 'async';
+      img.fetchPriority = 'high';
+      media.appendChild(img);
+    } else {
+      const fall = document.createElement('div');
+      fall.className = 'home-feature__media-fallback';
+      fall.innerHTML = signIconMarkup(current.id, accent);
+      media.appendChild(fall);
+    }
+    document.getElementById('hero-period').textContent = current.period || '';
+    document.getElementById('hero-element').textContent = current.element
+      ? `${current.element} 원소`
+      : '';
+    document.getElementById('hero-tagline').textContent = current.tagline || '';
+    document.getElementById('hero-summary').textContent = current.summary || '';
+
+    document.getElementById('hero-sign-link').href = signHref;
+    document.getElementById('hero-sign-link-label').href = signHref;
+
     const anim = { duration: 4, hoverEffect: true };
-    applyAnimatedText(document.getElementById('hero-name'), current.nameKo, current.color, { ...anim, size: 'hero' });
-    applyAnimatedText(document.getElementById('about-title'), '별과 빛을 연구합니다', '#6ec8c8', { ...anim, size: 'section' });
-    applyAnimatedText(document.getElementById('signs-title'), '12별자리 이야기', current.color, { ...anim, size: 'section' });
+    applyAnimatedText(document.getElementById('hero-name'), current.nameKo, accent, { ...anim, size: 'hero' });
+    applyAnimatedText(document.getElementById('explore-title'), '탐구 도구', '#6ec8c8', { ...anim, size: 'section' });
+    applyAnimatedText(document.getElementById('signs-title'), '12별자리 이야기', accent, { ...anim, size: 'section' });
     applyAnimatedText(document.getElementById('info-title'), '별빛 인포그래픽', '#ffd84d', { ...anim, size: 'section' });
+    applyAnimatedText(document.getElementById('about-title'), '별과 빛을 연구합니다', '#6ec8c8', { ...anim, size: 'section' });
+
     applyBubbleText(document.getElementById('mbti-tool-title'), 'MBTI 탐구', '#6ec8c8', { size: 'tool' });
     applyBubbleText(document.getElementById('enneagram-tool-title'), '에니어그램', '#9b6ec8', { size: 'tool' });
-    applyBubbleText(document.getElementById('equinox-tool-title'), '인포그래픽 지식 퀴즈', '#9b6ec8', { size: 'tool' });
-    applyBubbleText(document.getElementById('planet-tool-title'), '행성 거울 탐구', '#ffd84d', { size: 'tool' });
+    applyBubbleText(document.getElementById('equinox-tool-title'), '지식 퀴즈', '#b8a0e0', { size: 'tool' });
+    applyBubbleText(document.getElementById('planet-tool-title'), '행성 거울', '#ffd84d', { size: 'tool' });
+
     const footerEl = document.getElementById('footer-text');
     applyBubbleText(footerEl, footerEl.textContent, '#6ec8c8', { size: 'footer' });
-    const link = document.getElementById('hero-sign-link');
-    link.href = `/sign?id=${current.id}`;
-
-    document.getElementById('month-label').textContent =
-      `${new Date().getMonth() + 1}월, 이달의 별자리`;
-    document.getElementById('hero-tagline').textContent = current.tagline;
-    document.getElementById('hero-summary').textContent = current.summary;
 
     const { entries: skyEntries } = await loadJson('data/sky-calendar.json');
     const skyMonth = getSkyCalendarEntry(skyEntries);
     const heroSky = document.getElementById('hero-sky');
     if (skyMonth?.lead) {
       heroSky.hidden = false;
-      heroSky.innerHTML = `${skyMonth.lead} <a href="/sky" class="hero-sky-link">연간 달력 →</a>`;
+      heroSky.innerHTML = `${skyMonth.lead} <a href="/sky">연간 달력 →</a>`;
     }
 
     renderSignCards(signs, document.getElementById('sign-grid'));

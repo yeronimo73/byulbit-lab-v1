@@ -15,6 +15,29 @@
   --safe-b: env(safe-area-inset-bottom, 0px);
   --safe-t: env(safe-area-inset-top, 0px);
   --header: 3.25rem;
+  /* scale tokens (home renewal 2026-07) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 2.5rem;
+  --space-8: 3.5rem;
+  --text-xs: 0.68rem;
+  --text-sm: 0.82rem;
+  --text-md: 0.9rem;
+  --text-lg: 1.12rem;
+  --text-xl: clamp(1.45rem, 5vw, 2rem);
+  --text-display: clamp(2.1rem, 7vw, 3.25rem);
+  --r-sm: 0.55rem;
+  --r-md: 0.85rem;
+  --r-lg: 1.15rem;
+  --surface-1: rgba(14, 16, 28, 0.72);
+  --surface-2: rgba(18, 20, 34, 0.88);
+  --surface-feature: linear-gradient(165deg, rgba(22, 26, 44, 0.94) 0%, rgba(12, 14, 24, 0.96) 100%);
+  --shell: 1080px;
+  --shell-home: 1200px;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

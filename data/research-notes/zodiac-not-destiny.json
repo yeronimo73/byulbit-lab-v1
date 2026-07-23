@@ -47,6 +47,10 @@
   "practice": "이달의 별자리 페이지를 연 뒤, 「별·천문」에서 사실 한 줄, 「거울·심리」에서 질문 한 줄을 각각 다른 메모에 적어 보세요. 두 문장이 섞이지 않으면, 그 간격이 별빛연구소가 지키려는 층위 분리입니다.",
   "related": [
     {
+      "label": "연구 노트 · 세차 운동",
+      "href": "/research-note?id=precession"
+    },
+    {
       "label": "연구 노트 · 천문과 점성, 한 지붕에서 갈라선 이야기",
       "href": "/research-note?id=astro-coexist"
     },

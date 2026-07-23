@@ -2,6 +2,22 @@
   "updated": "2026-07-23",
   "notes": [
     {
+      "id": "precession",
+      "title": "세차 운동 — 별자리가 ‘바뀐다’는 말의 천문 층",
+      "pillar": "star",
+      "pillarLabel": "별 · 천문",
+      "date": "2026-07-23",
+      "teaser": "자전축 세차·춘분점 이동. 매체 헤드라인과 IAU 성좌·황도 기호를 층으로 나눈다."
+    },
+    {
+      "id": "mirror-reading",
+      "title": "탐구 결과 읽기 — 고정이 아니라 울림으로",
+      "pillar": "mirror",
+      "pillarLabel": "거울 · 심리",
+      "date": "2026-07-23",
+      "teaser": "MBTI·에니어·별자리 결과를 판결문이 아니라 일지 거울로 읽는 태도."
+    },
+    {
       "id": "astro-coexist",
       "title": "천문과 점성, 한 지붕에서 갈라선 이야기",
       "pillar": "star",

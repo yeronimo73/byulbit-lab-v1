@@ -110,6 +110,7 @@ function renderResult(r, meta, data) {
     <p class="ennea-links">
       <a class="btn btn-ghost" href="/tools/enneagram-guide#type-${r.core}">유형 ${r.core} 안내</a>
       <a class="btn btn-ghost" href="/tools/enneagram-guide">9유형 전체</a>
+      <a class="btn btn-ghost" href="/research-note?id=mirror-reading">결과 읽기 노트</a>
       <a class="btn btn-ghost" href="/research">연구 허브</a>
       <a class="btn btn-ghost" href="/">홈</a>
     </p>

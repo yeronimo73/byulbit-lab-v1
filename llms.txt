@@ -13,6 +13,10 @@
 ## 주요 URL
 
 - 홈: /
+- 홈 연구 노트 하이라이트: /#research-spotlight
+- 홈 연구 질문: /#agenda-home
+- 홈 이달의 하늘: /#this-month-sky
+- 홈 세미나 안내: /#seminar
 - 홈 FAQ: /#faq
 - 12별자리: /#signs · 상세 /sign?id={aries|taurus|gemini|cancer|leo|virgo|libra|scorpio|sagittarius|capricorn|aquarius|pisces}
 - 연구 허브: /research

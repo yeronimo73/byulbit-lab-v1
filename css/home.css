@@ -499,6 +499,232 @@ body.page-home .info-card .card-period {
   border-bottom-color: rgba(110, 200, 200, 0.5);
 }
 
+/* —— 1. Research spotlight —— */
+.home-spotlight__list {
+  list-style: none;
+  margin: var(--space-5) 0 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-3);
+}
+
+@media (min-width: 800px) {
+  .home-spotlight__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-4);
+  }
+}
+
+.home-spotlight__item {
+  margin: 0;
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+  background: var(--surface-1);
+  border-top: 3px solid var(--gold);
+}
+
+.home-spotlight__item[data-pillar="star"] { border-top-color: #ffd84d; }
+.home-spotlight__item[data-pillar="light"] { border-top-color: #6ec8c8; }
+.home-spotlight__item[data-pillar="mirror"] { border-top-color: #9b6ec8; }
+
+.home-spotlight__link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem 1.1rem 1.15rem;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  min-height: 100%;
+}
+
+.home-spotlight__link:hover .home-spotlight__title {
+  color: var(--gold);
+}
+
+.home-spotlight__pillar {
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--teal);
+}
+
+.home-spotlight__item[data-pillar="star"] .home-spotlight__pillar { color: #ffd84d; }
+.home-spotlight__item[data-pillar="light"] .home-spotlight__pillar { color: #6ec8c8; }
+
+.home-spotlight__title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.4;
+  color: var(--ivory);
+  text-wrap: pretty;
+}
+
+.home-spotlight__teaser {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.55;
+  text-wrap: pretty;
+  flex: 1;
+}
+
+.home-spotlight__date {
+  font-size: 0.72rem;
+  color: rgba(168, 160, 192, 0.85);
+  margin-top: 0.25rem;
+}
+
+.home-spotlight__more {
+  margin-top: var(--space-5);
+}
+
+/* —— 2. Agenda on home —— */
+.home-agenda__list {
+  list-style: none;
+  margin: var(--space-5) 0 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-3);
+  counter-reset: home-agenda;
+}
+
+.home-agenda__item {
+  counter-increment: home-agenda;
+  position: relative;
+  padding: 1rem 1.1rem 1rem 2.75rem;
+  border-radius: var(--r-md);
+  border: 1px solid var(--border);
+  background: var(--surface-1);
+  border-left: 3px solid #ffd84d;
+}
+
+.home-agenda__item[data-pillar="light"] { border-left-color: #6ec8c8; }
+.home-agenda__item[data-pillar="mirror"] { border-left-color: #9b6ec8; }
+
+.home-agenda__item::before {
+  content: counter(home-agenda, decimal-leading-zero);
+  position: absolute;
+  left: 0.85rem;
+  top: 1.05rem;
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  color: var(--gold);
+  opacity: 0.9;
+}
+
+.home-agenda__item[data-pillar="light"]::before { color: #6ec8c8; }
+.home-agenda__item[data-pillar="mirror"]::before { color: #9b6ec8; }
+
+.home-agenda__status {
+  display: inline-block;
+  font-size: 0.68rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.home-agenda__status[data-status="published"] {
+  border-color: rgba(110, 200, 200, 0.45);
+  color: var(--teal);
+}
+
+.home-agenda__status[data-status="open"] {
+  border-color: rgba(255, 216, 77, 0.35);
+  color: var(--gold);
+}
+
+.home-agenda__q {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.45;
+  color: var(--ivory);
+  text-decoration: none;
+  text-wrap: pretty;
+}
+
+.home-agenda__q:hover {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.home-agenda__note {
+  margin: 0.4rem 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+/* —— 3. This month sky —— */
+.home-sky__list {
+  list-style: none;
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+  max-width: 40rem;
+}
+
+.home-sky__list li {
+  padding: 0.75rem 1rem;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--border);
+  background: var(--surface-1);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: rgba(244, 242, 250, 0.9);
+  text-wrap: pretty;
+}
+
+.home-sky__list a { color: var(--teal); }
+.home-sky__more { margin-top: var(--space-4); }
+
+/* —— 5. Seminar strip —— */
+.home-seminar__card {
+  margin-top: var(--space-4);
+  padding: 1.15rem 1.25rem;
+  border-radius: var(--r-md);
+  border: 1px solid rgba(255, 216, 77, 0.28);
+  background: linear-gradient(165deg, rgba(42, 46, 28, 0.45), rgba(26, 31, 56, 0.9));
+  max-width: 40rem;
+}
+
+.home-seminar__kicker {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--gold);
+  margin: 0 0 0.4rem;
+}
+
+.home-seminar__when {
+  font-size: 0.92rem;
+  margin: 0 0 0.55rem;
+  color: var(--ivory);
+}
+
+.home-seminar__note {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.home-footer__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.home-footer__updated {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
 /* —— FAQ (AEO/GEO extractable) —— */
 .home-faq__def {
   max-width: 40rem;

@@ -78,9 +78,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/site.css?v=soft-20260723c" />
+  <link rel="stylesheet" href="css/site.css?v=soft-20260723d" />
   <link rel="stylesheet" href="css/infographic-poster.css" />
-  <link rel="stylesheet" href="css/home.css?v=soft-20260723c" />
+  <link rel="stylesheet" href="css/home.css?v=soft-20260723d" />
 </head>
 <body class="page-home">
   <div id="star-canvas" aria-hidden="true"></div>
@@ -109,6 +109,9 @@
       <li><a href="#signs">12별자리</a></li>
       <li><a href="#info">인포그래픽</a></li>
       <li><a href="#about">연구소</a></li>
+      <li><a href="#research-spotlight">연구 노트</a></li>
+      <li><a href="#this-month-sky">이달의 하늘</a></li>
+      <li><a href="#seminar">세미나</a></li>
       <li><a href="/research">연구 허브</a></li>
       <li><a href="/sky">연간 하늘 달력</a></li>
       <li><a href="/color-atlas">황도 12색 아틀라스</a></li>
@@ -151,6 +154,82 @@
           <a class="home-feature__cta" id="hero-sign-link-label" href="#">이달의 별자리 이야기 읽기 →</a>
         </div>
       </article>
+    </section>
+
+    <!-- 1. 연구 노트 하이라이트 -->
+    <section class="section home-spotlight" id="research-spotlight" aria-labelledby="spotlight-title">
+      <p class="section-label">Research Notes</p>
+      <h2 id="spotlight-title">연구 노트</h2>
+      <p class="section-lead">출처 있는 짧은 리서치. 운세·치료 단정 없이 별·빛·거울을 층으로 읽습니다.</p>
+      <ul class="home-spotlight__list">
+        <li class="home-spotlight__item" data-pillar="star">
+          <a href="/research-note?id=astro-coexist" class="home-spotlight__link">
+            <span class="home-spotlight__pillar">별 · 천문</span>
+            <span class="home-spotlight__title">천문과 점성, 한 지붕에서 갈라선 이야기</span>
+            <span class="home-spotlight__teaser">케플러의 한 손, 에페메리스 숫자, 파트리지 사건. 같은 데이터·다른 목적.</span>
+            <span class="home-spotlight__date">2026-07-23</span>
+          </a>
+        </li>
+        <li class="home-spotlight__item" data-pillar="star">
+          <a href="/research-note?id=zodiac-not-destiny" class="home-spotlight__link">
+            <span class="home-spotlight__pillar">별 · 천문</span>
+            <span class="home-spotlight__title">별자리는 운명의 판결서가 아니다</span>
+            <span class="home-spotlight__teaser">IAU 성좌·황도 기호·신화를 층위로 분리한다. 좌표이지 판결서가 아니다.</span>
+            <span class="home-spotlight__date">2026-07-23</span>
+          </a>
+        </li>
+        <li class="home-spotlight__item" data-pillar="light">
+          <a href="/research-note?id=color-emotion" class="home-spotlight__link">
+            <span class="home-spotlight__pillar">빛 · 색채</span>
+            <span class="home-spotlight__title">색은 감정을 바꾸는가?</span>
+            <span class="home-spotlight__teaser">128년 색과 감정 연구. 연상 ≠ 체감, Color-in-Context.</span>
+            <span class="home-spotlight__date">2026-06-07</span>
+          </a>
+        </li>
+      </ul>
+      <p class="home-spotlight__more"><a class="btn btn-ghost" href="/research">연구 허브 전체 보기 →</a></p>
+    </section>
+
+    <!-- 2. 지금 묻는 질문 -->
+    <section class="section home-agenda" id="agenda-home" aria-labelledby="agenda-home-title">
+      <p class="section-label">Open Questions</p>
+      <h2 id="agenda-home-title">지금 우리가 묻는 질문</h2>
+      <p class="section-lead">긴 논문 목록이 아니라, 별빛연구소가 붙잡고 있는 연구 질문입니다.</p>
+      <ol class="home-agenda__list">
+        <li class="home-agenda__item" data-pillar="star">
+          <span class="home-agenda__status" data-status="published">노트 공개</span>
+          <a class="home-agenda__q" href="/research-note?id=astro-coexist">천문과 점성은 왜 한 지붕에 살다 갈라섰으며, 같은 숫자에서 무엇이 갈라지는가?</a>
+          <p class="home-agenda__note">케플러·에페메리스·파트리지. 좌표 출처와 의미 읽기를 문단으로 분리한다.</p>
+        </li>
+        <li class="home-agenda__item" data-pillar="star">
+          <span class="home-agenda__status" data-status="published">노트 공개</span>
+          <a class="home-agenda__q" href="/research-note?id=zodiac-not-destiny">관측 가능한 별자리와 신화·운세 속 별자리는 어떻게 어긋나는가?</a>
+          <p class="home-agenda__note">황도·IAU 성좌·문화 상징을 층위로 분리한다.</p>
+        </li>
+        <li class="home-agenda__item" data-pillar="light">
+          <span class="home-agenda__status" data-status="published">노트 공개</span>
+          <a class="home-agenda__q" href="/research-note?id=color-emotion">색–감정 연상은 문화마다 얼마나 갈리며, 연상과 체감은 어디까지 구분되는가?</a>
+          <p class="home-agenda__note">치료·운세 단정 없이 시각 앵커로만 쓴다.</p>
+        </li>
+        <li class="home-agenda__item" data-pillar="mirror">
+          <span class="home-agenda__status" data-status="open">진행 예정</span>
+          <a class="home-agenda__q" href="/research#policy-heading">자기 기록이 반복될 때, 성격 고정이 아니라 어떤 「울림」만 읽게 할 수 있는가?</a>
+          <p class="home-agenda__note">방법론 노트 예정. 개인 데이터 수집 없이 사용법과 태도만 다룬다.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 3. 이달의 하늘 -->
+    <section class="section home-sky" id="this-month-sky" aria-labelledby="home-sky-title">
+      <p class="section-label">This Month’s Sky</p>
+      <h2 id="home-sky-title">이달의 하늘 · 7월</h2>
+      <p class="section-lead">7월, 게자리·사자자리 시즌. 밤하늘이 짧지만 남쪽에서 사자자리를 찾기 좋습니다.</p>
+      <ul class="home-sky__list">
+        <li><strong>7/11</strong> 벅달(보름, 예상) — 달빛 일지·명도 관찰에 쓰기 좋은 밤</li>
+        <li><strong>7/23~</strong> 황도 사자자리 구간 — <a href="/sign?id=leo">레굴루스 방향 · 사자자리 이야기</a></li>
+        <li><strong>상시</strong> 관측 가능 사실과 상징 해석을 한 문장에 섞지 않기 — <a href="/research-note?id=zodiac-not-destiny">층위 분리 노트</a></li>
+      </ul>
+      <p class="home-sky__more"><a class="btn btn-ghost" href="/sky">2026 연간 관측 달력 →</a></p>
     </section>
 
     <section class="section" id="explore">
@@ -249,9 +328,23 @@
       </div>
       <div class="home-about-links">
         <a href="/research">연구 허브</a>
-        <a href="/research-note?id=astro-coexist">천문과 점성 노트</a>
+        <a href="/#research-spotlight">연구 노트</a>
         <a href="/color-atlas">황도 12색 아틀라스</a>
         <a href="/sky">연간 하늘 달력</a>
+      </div>
+    </section>
+
+    <!-- 5. 세미나 스트립 (기간 한정) -->
+    <section class="section home-seminar" id="seminar" aria-labelledby="seminar-title">
+      <p class="section-label">Seminar</p>
+      <h2 id="seminar-title">현장 · 7월 28일</h2>
+      <div class="home-seminar__card">
+        <p class="home-seminar__kicker">나를 찾아가는 별빛 이야기</p>
+        <p class="home-seminar__when"><strong>2026년 7월 28일(화) 14시</strong> · 데시오 3층 (중구 공평동 82-15)</p>
+        <p class="home-seminar__note">
+          운세를 점치는 자리가 아닙니다. 별·빛·거울을 읽는 언어를 짧게 나누는 오프라인 안내입니다.
+          참가비·온라인 신청 폼은 두지 않습니다.
+        </p>
       </div>
     </section>
 
@@ -293,12 +386,17 @@
 
   <footer class="site-footer shell">
     <div class="home-footer">
-      <p id="footer-text">© 별빛연구소 Starlight Research · 비영리 천체·심리 연구</p>
+      <div class="home-footer__meta">
+        <p id="footer-text">© 별빛연구소 Starlight Research · 비영리 천체·심리 연구</p>
+        <p class="home-footer__updated">콘텐츠 갱신: <time datetime="2026-07-23">2026-07-23</time></p>
+      </div>
       <ul class="home-footer__links">
-        <li><a href="/research">연구</a></li>
+        <li><a href="/#research-spotlight">연구 노트</a></li>
+        <li><a href="/research">연구 허브</a></li>
         <li><a href="/sky">하늘</a></li>
         <li><a href="/color-atlas">색 아틀라스</a></li>
         <li><a href="#explore">탐구</a></li>
+        <li><a href="#faq">FAQ</a></li>
       </ul>
     </div>
   </footer>
@@ -324,9 +422,9 @@
   <script type="importmap">
   { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }
   </script>
-  <script type="module" src="js/bg.js?v=soft-20260723c"></script>
+  <script type="module" src="js/bg.js?v=soft-20260723d"></script>
   <script type="module">
-    import { loadJson, initNav, initPopup, renderSignCards, renderInfographics } from './js/site.js?v=soft-20260723c';
+    import { loadJson, initNav, initPopup, renderSignCards, renderInfographics } from './js/site.js?v=soft-20260723d';
     import { getCurrentSign, getSkyCalendarEntry } from './js/scoring.js';
     import { applyAnimatedText } from './js/animated-hero-text.js';
     import { applyBubbleText } from './js/bubble-text.js';

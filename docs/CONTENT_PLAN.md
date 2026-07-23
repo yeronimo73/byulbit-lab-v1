@@ -183,7 +183,17 @@ byulbit-lab-v1/
 | 인포 3층 | Miho(비주얼) + 집필 |
 | 배포 | `./scripts/deploy-vercel.sh` |
 
-**다음 권장 작업**: 7/28 세미나 요지 노트 · 거울 방법론 노트 · 월간 하늘 메모.
+**다음 권장 작업**: 7/28 세미나 요지 노트 · 거울 방법론 노트 · 월간 하늘 메모 · 홈 이달의 별 SSR 폴백.
+
+### 홈 v1.1 콘텐츠 패키지 (2026-07-23) — 완료
+
+| # | 블록 | 경로 |
+|---|------|------|
+| 1 | 연구 노트 하이라이트 3카드 | `index.html#research-spotlight` |
+| 2 | 지금 묻는 질문 | `index.html#agenda-home` |
+| 3 | 이달의 하늘 (7월) | `index.html#this-month-sky` |
+| 4 | 콘텐츠 갱신일 footer | `time datetime=2026-07-23` |
+| 5 | 세미나 스트립 7/28 | `index.html#seminar` |
 
 ### P3 1단계 (2026-07-23) — 완료
 

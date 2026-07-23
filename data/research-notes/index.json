@@ -1,6 +1,22 @@
 {
-  "updated": "2026-06-07",
+  "updated": "2026-07-23",
   "notes": [
+    {
+      "id": "astro-coexist",
+      "title": "천문과 점성, 한 지붕에서 갈라선 이야기",
+      "pillar": "star",
+      "pillarLabel": "별 · 천문",
+      "date": "2026-07-23",
+      "teaser": "케플러의 한 손, 에페메리스 숫자, 파트리지 사건. 같은 데이터·다른 목적, 별빛연구소의 층위 분리."
+    },
+    {
+      "id": "zodiac-not-destiny",
+      "title": "별자리는 운명의 판결서가 아니다",
+      "pillar": "star",
+      "pillarLabel": "별 · 천문",
+      "date": "2026-07-23",
+      "teaser": "IAU 성좌·황도 기호·신화를 층위로 분리한다. 별자리는 하늘의 좌표이지 운명의 판결서가 아니다."
+    },
     {
       "id": "color-emotion",
       "title": "색은 감정을 바꾸는가?",

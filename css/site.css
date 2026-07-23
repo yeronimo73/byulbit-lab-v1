@@ -1,15 +1,16 @@
 :root {
-  --bg: #0a0a0f;
+  /* soft-night v2: 칠흑 대비 확실히 밝힌 미드나이트 (캐시버스트 soft-20260723b) */
+  --bg: #1a1f38;
   --text: #f4f2fa;
-  --muted: #a8a0c0;
-  --border: rgba(255, 255, 255, 0.12);
+  --muted: #b8b0cc;
+  --border: rgba(255, 255, 255, 0.16);
   --gold: #ffd84d;
   --ivory: #f0ebe0;
   --ivory-bright: #f7f3ea;
-  --ivory-muted: rgba(240, 235, 224, 0.58);
+  --ivory-muted: rgba(240, 235, 224, 0.64);
   --teal: #6ec8c8;
   --violet: #9b6ec8;
-  --card: rgba(14, 16, 28, 0.82);
+  --card: rgba(32, 38, 62, 0.9);
   --font-serif: "Noto Serif KR", "Cormorant Garamond", serif;
   --font-sans: "IBM Plex Sans KR", system-ui, sans-serif;
   --safe-b: env(safe-area-inset-bottom, 0px);
@@ -33,9 +34,9 @@
   --r-sm: 0.55rem;
   --r-md: 0.85rem;
   --r-lg: 1.15rem;
-  --surface-1: rgba(14, 16, 28, 0.72);
-  --surface-2: rgba(18, 20, 34, 0.88);
-  --surface-feature: linear-gradient(165deg, rgba(22, 26, 44, 0.94) 0%, rgba(12, 14, 24, 0.96) 100%);
+  --surface-1: rgba(36, 42, 68, 0.82);
+  --surface-2: rgba(40, 46, 74, 0.92);
+  --surface-feature: linear-gradient(165deg, rgba(42, 50, 82, 0.94) 0%, rgba(26, 30, 52, 0.96) 100%);
   --shell: 1080px;
   --shell-home: 1200px;
 }
@@ -60,7 +61,7 @@ body {
 .ambient-glow {
   position: fixed; top: -18%; left: 50%; width: min(780px, 115vw); height: min(520px, 70vh);
   transform: translateX(-50%);
-  background: radial-gradient(ellipse, rgba(255,216,77,0.1) 0%, rgba(110,200,200,0.05) 40%, transparent 72%);
+  background: radial-gradient(ellipse, rgba(255,216,77,0.16) 0%, rgba(110,200,200,0.09) 40%, transparent 72%);
   pointer-events: none; z-index: 0;
   animation: glow-pulse 7s ease-in-out infinite alternate;
   display: none;
@@ -76,7 +77,7 @@ body[data-bg-mode="stars"] .ambient-glow { display: block; }
   padding: 0.55rem 0.95rem;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(10, 12, 22, 0.82);
+  background: rgba(22, 26, 44, 0.88);
   backdrop-filter: blur(12px);
   color: var(--text);
   font-family: var(--font-sans);
@@ -102,7 +103,7 @@ body[data-bg-mode="stars"] .ambient-glow { display: block; }
 .site-header {
   position: sticky; top: 0; z-index: 100;
   padding-top: var(--safe-t);
-  background: rgba(12, 14, 24, 0.78);
+  background: rgba(28, 34, 58, 0.86);
   backdrop-filter: blur(18px) saturate(1.15);
   border-bottom: 1px solid var(--border);
 }
@@ -185,7 +186,7 @@ a.brand.bubble-text { cursor: pointer; }
 .nav-drawer a:hover { color: var(--gold); }
 .nav-drawer {
   display: none; position: fixed; inset: 0; z-index: 150;
-  background: rgba(6, 8, 16, 0.94); backdrop-filter: blur(14px);
+  background: rgba(18, 22, 40, 0.94); backdrop-filter: blur(14px);
   padding: calc(var(--safe-t) + 4rem) 1.25rem 2rem;
 }
 .nav-drawer.is-open { display: block; }
@@ -613,6 +614,81 @@ body.popup-open { overflow: hidden; }
   color: var(--gold);
   margin-bottom: 0.85rem;
 }
+.research-agenda-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+  counter-reset: agenda;
+}
+.research-agenda-item {
+  counter-increment: agenda;
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.85rem;
+  padding: 1rem 1.1rem 1rem 2.75rem;
+  border-left: 3px solid var(--agenda-accent, var(--gold));
+}
+.research-agenda-item::before {
+  content: counter(agenda, decimal-leading-zero);
+  position: absolute;
+  left: 0.85rem;
+  top: 1.05rem;
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  color: var(--agenda-accent, var(--gold));
+  opacity: 0.85;
+}
+.research-agenda-item__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.65rem;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+.research-agenda-item__pillar {
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--agenda-accent, var(--gold));
+}
+.research-agenda-item__status {
+  font-size: 0.68rem;
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+.research-agenda-item__status[data-status="published"] {
+  border-color: rgba(110, 200, 200, 0.45);
+  color: var(--teal);
+}
+.research-agenda-item__status[data-status="open"] {
+  border-color: rgba(255, 216, 77, 0.35);
+  color: var(--gold);
+}
+.research-agenda-item__q {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.45;
+  color: var(--ivory);
+  text-decoration: none;
+  text-wrap: pretty;
+}
+a.research-agenda-item__q:hover {
+  color: var(--agenda-accent, var(--teal));
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.research-agenda-item__note {
+  margin: 0.45rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--muted);
+  text-wrap: pretty;
+}
 .research-pillars {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -693,7 +769,7 @@ body.popup-open { overflow: hidden; }
 .research-notes-item {
   border: 1px solid var(--border);
   border-radius: 0.65rem;
-  background: linear-gradient(135deg, rgba(18, 20, 36, 0.85), rgba(10, 10, 18, 0.95));
+  background: linear-gradient(135deg, rgba(30, 34, 56, 0.88), rgba(20, 22, 40, 0.95));
 }
 .research-notes-item__link {
   display: block;
@@ -762,7 +838,7 @@ body.popup-open { overflow: hidden; }
   padding: 1rem 1.1rem;
   border-radius: 0.65rem;
   border: 1px solid color-mix(in srgb, var(--note-accent, var(--teal)) 35%, var(--border));
-  background: color-mix(in srgb, var(--note-accent, var(--teal)) 8%, rgba(10, 10, 18, 0.9));
+  background: color-mix(in srgb, var(--note-accent, var(--teal)) 10%, rgba(22, 26, 44, 0.92));
 }
 .research-note-practice h2 { font-size: 0.92rem; margin-bottom: 0.45rem; color: var(--note-accent, var(--teal)); }
 .research-note-practice p { margin: 0; font-size: 0.88rem; line-height: 1.55; }
@@ -783,7 +859,7 @@ body.popup-open { overflow: hidden; }
   border: 1px solid var(--border);
   border-radius: 0.65rem;
   padding: 0.9rem 1rem;
-  background: linear-gradient(165deg, rgba(18, 20, 36, 0.88), rgba(10, 10, 18, 0.95));
+  background: linear-gradient(165deg, rgba(30, 34, 56, 0.9), rgba(20, 22, 40, 0.96));
 }
 .sky-cal-month--current {
   border-color: color-mix(in srgb, var(--gold) 45%, var(--border));
@@ -1046,7 +1122,7 @@ body.popup-open { overflow: hidden; }
   width: min(92vw, 420px);
   padding: 0;
   overflow: hidden;
-  background: #0a0a12;
+  background: #1a1f38;
 }
 .popup-body--poster { padding: 0; text-align: center; }
 .popup-poster {

@@ -183,4 +183,12 @@ byulbit-lab-v1/
 | 인포 3층 | Miho(비주얼) + 집필 |
 | 배포 | `./scripts/deploy-vercel.sh` |
 
-**다음 권장 작업**: 세미나 노트 아카이브 승격 · P3 콘텐츠 확장(신규 연구 노트·인포).
+**다음 권장 작업**: 7/28 세미나 요지 노트 · 거울 방법론 노트 · 월간 하늘 메모.
+
+### P3 1단계 (2026-07-23) — 완료
+
+| 항목 | 경로 |
+|------|------|
+| 연구 질문 보드 | `data/research-hub.json` → `agenda` · `research.html#agenda-heading` |
+| 연구 노트 #5 · 별자리 ≠ 운명 | `data/research-notes/zodiac-not-destiny.json` |
+| 연구 노트 #6 · 천문↔점성 공존·분리 | `data/research-notes/astro-coexist.json` (Brain `천문과 점성의 공존-분리` + yaan 3부작 증류) |

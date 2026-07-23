@@ -24,7 +24,7 @@
   <title>연구 허브 | 별빛연구소</title>  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=IBM+Plex+Sans+KR:wght@300;400;500;600&family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/site.css" />
+  <link rel="stylesheet" href="css/site.css?v=soft-20260723b" />
 </head>
 <body>
   <div id="star-canvas" aria-hidden="true"></div>
@@ -63,6 +63,12 @@
     <p class="section-label" id="research-label">Starlight Research Hub</p>
     <h1 class="research-title" id="research-title">별빛 연구 허브</h1>
     <p class="section-lead" id="research-lead"></p>
+
+    <section class="research-section" aria-labelledby="agenda-heading" id="research-agenda-section" hidden>
+      <h2 id="agenda-heading">지금 우리가 묻고 있는 질문</h2>
+      <p class="research-bib-note" id="research-agenda-lead"></p>
+      <ol class="research-agenda-list" id="research-agenda-list"></ol>
+    </section>
 
     <section class="research-section" aria-labelledby="pillars-heading">
       <h2 id="pillars-heading">세 축</h2>
@@ -107,9 +113,9 @@
   <script type="importmap">
   { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js" } }
   </script>
-  <script type="module" src="js/bg.js"></script>
+  <script type="module" src="js/bg.js?v=soft-20260723b"></script>
   <script type="module">
-    import { loadJson, initNav } from './js/site.js?v=research-hub';
+    import { loadJson, initNav } from './js/site.js?v=research-hub-20260723';
     import { getCurrentSign, getSkyCalendarEntry } from './js/scoring.js';
 
     initNav();
@@ -121,6 +127,35 @@
       loadJson('data/research-notes/index.json').catch(() => ({ notes: [] })),
       loadJson('data/signs.json'),
     ]);
+
+    const agenda = hub.agenda;
+    if (agenda?.items?.length) {
+      const agendaSec = document.getElementById('research-agenda-section');
+      agendaSec.hidden = false;
+      if (agenda.title) {
+        document.getElementById('agenda-heading').textContent = agenda.title;
+      }
+      const agendaLead = agenda.lead
+        ? `${agenda.lead}${agenda.updated ? ` (갱신 ${agenda.updated})` : ''}`
+        : '';
+      document.getElementById('research-agenda-lead').textContent = agendaLead;
+      const PILLAR_COLOR = { star: '#ffd84d', light: '#6ec8c8', mirror: '#9b6ec8' };
+      document.getElementById('research-agenda-list').innerHTML = agenda.items.map((item) => {
+        const accent = PILLAR_COLOR[item.pillar] || '#6ec8c8';
+        const q = item.href
+          ? `<a class="research-agenda-item__q" href="${item.href}">${item.question}</a>`
+          : `<span class="research-agenda-item__q">${item.question}</span>`;
+        return `
+          <li class="research-agenda-item" style="--agenda-accent:${accent}">
+            <div class="research-agenda-item__meta">
+              <span class="research-agenda-item__pillar">${item.pillarLabel || item.pillar}</span>
+              <span class="research-agenda-item__status" data-status="${item.status || 'open'}">${item.statusLabel || item.status || ''}</span>
+            </div>
+            ${q}
+            ${item.note ? `<p class="research-agenda-item__note">${item.note}</p>` : ''}
+          </li>`;
+      }).join('');
+    }
 
     const skyMonth = getSkyCalendarEntry(skyEntries);
     if (skyMonth) {

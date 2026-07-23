@@ -71,7 +71,9 @@ const FRAGMENT_SHADER = `
     }
 
     o = tanh(pow(o / 100.0, vec4(1.6)));
-    gl_FragColor = o * 1.5;
+    /* soft-night: 칠흑 베이스 대신 미드나이트 바닥 + 오로라 */
+    vec3 base = vec3(0.10, 0.12, 0.22);
+    gl_FragColor = vec4(base + o.rgb * 1.55, 1.0);
   }
 `;
 
@@ -101,7 +103,7 @@ function createAurora(mount) {
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.setClearColor(0x0a0a0f, 1);
+  renderer.setClearColor(0x1a1f38, 1);
   mount.appendChild(renderer.domElement);
 
   const scene = new THREE.Scene();
@@ -153,12 +155,12 @@ function createStars(mount) {
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
   renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.setClearColor(0x0a0a0f, 1);
+  renderer.setClearColor(0x1a1f38, 1);
   mount.appendChild(renderer.domElement);
 
   const scene = new THREE.Scene();
-  scene.background = new THREE.Color("#0a0a0f");
-  scene.fog = new THREE.Fog("#0a0a0f", 10, 28);
+  scene.background = new THREE.Color("#1a1f38");
+  scene.fog = new THREE.Fog("#1a1f38", 10, 28);
 
   const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 100);
   camera.position.z = 10;

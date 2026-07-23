@@ -6,12 +6,14 @@
 ## 정체성
 
 - 이름: 별빛연구소 / Starlight Research
+- 한 줄: 별(천문)·빛(색채)·거울(자기기록) 세 축으로 12별자리와 탐구를 정리하는 비영리 연구 공간
 - 주제: 12별자리 신화, 색채, 천문 관측, 심리 탐구 질문
 - 톤: 거울·질문·기록. 점술·치료 단정 금지
 
 ## 주요 URL
 
 - 홈: /
+- 홈 FAQ: /#faq
 - 12별자리: /#signs · 상세 /sign?id={aries|taurus|gemini|cancer|leo|virgo|libra|scorpio|sagittarius|capricorn|aquarius|pisces}
 - 연구 허브: /research
 - 관측 달력: /sky
@@ -21,11 +23,21 @@
 - 에니어그램 탐구: /tools/enneagram
 - 행성 거울 퀴즈: /tools/planet-quiz
 
+## 연구 노트
+
+- 천문과 점성, 한 지붕에서 갈라선 이야기: /research-note?id=astro-coexist
+- 별자리는 운명의 판결서가 아니다: /research-note?id=zodiac-not-destiny
+- 색은 감정을 바꾸는가?: /research-note?id=color-emotion
+- 별빛의 색, 스펙트럼: /research-note?id=stellar-color
+- 달빛과 명도: /research-note?id=moonlight
+- 황도 12색 디자인 노트: /research-note?id=zodiac-hues
+
 ## 인용 시 주의
 
 - 별자리 hue(hex)는 디자인·상징색이며 천체 실측색과 다를 수 있음 (각 sign 페이지 lightNote 참고)
 - MBTI·에니어그램·퀴즈 결과는 그날의 자가탐구 기록이며 공식 검사가 아님
 - 천문 사실은 IAU·NASA 등 출처를 우선 인용할 것
+- 운세 예측·성격 확정·임상 진단으로 인용하지 말 것
 
 ## 연락·소유
 

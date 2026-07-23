@@ -1208,6 +1208,109 @@ a.research-agenda-item__q:hover {
 .type-pct-row { display: grid; grid-template-columns: 4.5rem 1fr 2.5rem; align-items: center; gap: 0.5rem; font-size: 0.78rem; }
 .type-pct-bar { height: 0.35rem; background: rgba(255,255,255,0.08); border-radius: 2px; overflow: hidden; }
 .type-pct-fill { height: 100%; background: var(--violet); }
+
+/* Enneagram result report */
+.ennea-result-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 4vw, 1.7rem);
+  margin: 0.15rem 0 0.5rem;
+}
+.ennea-center-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  color: var(--teal);
+  border: 1px solid rgba(110, 200, 200, 0.35);
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  margin-bottom: 0.65rem;
+  max-width: 100%;
+  text-wrap: pretty;
+}
+.ennea-summary {
+  font-size: 0.95rem;
+  margin: 0 0 1.15rem;
+  line-height: 1.6;
+  text-wrap: pretty;
+}
+.ennea-p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0 0 0.55rem;
+  text-wrap: pretty;
+}
+.ennea-muted { color: var(--muted); font-size: 0.85rem; }
+.ennea-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+.ennea-list li { margin-bottom: 0.3rem; }
+.ennea-questions {
+  margin: 0 0 0.75rem;
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+.ennea-questions li { margin-bottom: 0.4rem; text-wrap: pretty; }
+.ennea-practice {
+  margin: 0.5rem 0 0;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.65rem;
+  border-left: 3px solid var(--violet);
+  background: rgba(155, 110, 200, 0.08);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+.ennea-dual {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 640px) {
+  .ennea-dual { grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+}
+.ennea-limits {
+  margin: 1.25rem 0 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 216, 77, 0.25);
+  background: rgba(255, 216, 77, 0.06);
+}
+.ennea-limits h3 {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--gold);
+  margin: 0 0 0.45rem;
+}
+.ennea-limits p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: rgba(244, 242, 250, 0.88);
+  text-wrap: pretty;
+}
+.ennea-about {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 0 0 1.1rem;
+  text-wrap: pretty;
+}
+.ennea-sources {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.88rem;
+}
+.ennea-sources li { margin-bottom: 0.35rem; }
+.ennea-sources a { color: var(--teal); }
+.ennea-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0 0.5rem;
+}
+.ennea-intro { margin-top: 0.25rem; }
 .disclaimer { font-size: 0.72rem; color: var(--muted); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border); }
 
 .sign-detail-img {

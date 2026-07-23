@@ -66,14 +66,19 @@ export function scoreEnneagram(items, answers, meta) {
   const wing = scores[left] >= scores[right] ? left : right;
   const wingLabel = `${core}w${wing}`;
 
-  const { gut, heart, head } = meta.centers;
-  const tritype = [
-    gut.reduce((best, t) => (scores[t] > scores[best] ? t : best), gut[0]),
-    heart.reduce((best, t) => (scores[t] > scores[best] ? t : best), heart[0]),
-    head.reduce((best, t) => (scores[t] > scores[best] ? t : best), head[0]),
-  ].join('');
+  const centerList = (c) => (Array.isArray(c) ? c : (c?.types || []));
+  const gut = centerList(meta.centers?.gut);
+  const heart = centerList(meta.centers?.heart);
+  const head = centerList(meta.centers?.head);
+  const pickBest = (arr) => arr.reduce((best, t) => (scores[t] > scores[best] ? t : best), arr[0]);
+  const tritype = [pickBest(gut), pickBest(heart), pickBest(head)].join('');
+  const tritypeParts = {
+    gut: pickBest(gut),
+    heart: pickBest(heart),
+    head: pickBest(head),
+  };
 
-  return { scores, pct, core, wing, wingLabel, tritype };
+  return { scores, pct, core, wing, wingLabel, tritype, tritypeParts };
 }
 
 export function getCurrentSign(signs, date = new Date()) {

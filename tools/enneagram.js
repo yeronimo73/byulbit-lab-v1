@@ -108,6 +108,8 @@ function renderResult(r, meta, data) {
     ${meta.limits ? `<aside class="ennea-limits"><h3>한계 · 읽는 태도</h3><p>${meta.limits}</p></aside>` : ''}
     <p class="disclaimer">${data.disclaimer || '비공식 자가탐구 도구이며 임상 진단이 아닙니다.'}</p>
     <p class="ennea-links">
+      <a class="btn btn-ghost" href="/tools/enneagram-guide#type-${r.core}">유형 ${r.core} 안내</a>
+      <a class="btn btn-ghost" href="/tools/enneagram-guide">9유형 전체</a>
       <a class="btn btn-ghost" href="/research">연구 허브</a>
       <a class="btn btn-ghost" href="/">홈</a>
     </p>
@@ -191,6 +193,9 @@ async function main() {
         ${meta.limits ? `<aside class="ennea-limits"><h3>한계 · 면책</h3><p>${meta.limits}</p></aside>` : ''}
         ${sources ? `<div class="result-block"><h3>참고</h3><ul class="ennea-sources">${sources}</ul></div>` : ''}
         <p class="disclaimer">${data.disclaimer || ''}</p>
+        <p class="ennea-links">
+          <a class="btn btn-ghost" href="/tools/enneagram-guide">9유형 안내 먼저 보기</a>
+        </p>
         <div class="tool-actions">
           <button type="button" class="btn btn-gold" id="start-ennea">63문항 시작</button>
         </div>

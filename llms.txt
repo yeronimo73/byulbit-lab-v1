@@ -24,7 +24,8 @@
 - 황도 12색: /color-atlas
 - 인포그래픽: /infographic?id={planet-mirror|full-moon-2026|meteor-showers|equinox|universe-year}
 - MBTI 탐구: /tools/mbti
-- 에니어그램 탐구: /tools/enneagram
+- 에니어그램 탐구(63문항): /tools/enneagram
+- 에니어그램 9유형 안내: /tools/enneagram-guide
 - 행성 거울 퀴즈: /tools/planet-quiz
 
 ## 연구 노트

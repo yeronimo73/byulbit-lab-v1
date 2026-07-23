@@ -2,7 +2,7 @@
 
 **일자**: 2026-07-23  
 **주관**: 별빛연구소 (Starlight Research)  
-**상태**: Phase 1–2 구현 완료 (2026-07-23) · Phase 3 정적 가이드는 후속  
+**상태**: Phase 1–3 구현 완료 (2026-07-23) · Phase 4 백로그  
 **대상 정본**: `tools/enneagram.html` · `tools/enneagram.js` · `data/enneagram-types.json` · `data/enneagram-items.json`  
 **관련**: `docs/TOOLS_enneagram_spec.md` · `docs/COLOR_RESEARCH.md`(층 분리 철학 동형) · Brain `MOC-Enneagram`
 
@@ -281,12 +281,12 @@ limits 재노출 (짧게) + disclaimer
 
 **완료 조건:** Acceptance §2.3 체크리스트 전항  
 
-### Phase 3 — 연결·SEO (0.5~1일, 선택)
+### Phase 3 — 연결·SEO (완료 2026-07-23)
 
-- [ ] 정적 유형 가이드 페이지 또는 결과 하단 9링크  
-- [ ] sitemap / llms.txt에 가이드 URL  
-- [ ] 홈 탐구 카드 카피 1줄 보강  
-- [ ] 연구 허브 거울 agenda 상태 업데이트(방법론 노트와 묶을 경우)  
+- [x] 정적 유형 가이드 `tools/enneagram-guide.html` (9카드 SSR)  
+- [x] sitemap / llms.txt 가이드 URL  
+- [x] 홈 탐구 카드 카피 보강  
+- [x] 탐구 인트로·결과에 가이드 링크 · 허브 agenda → 도구  
 
 ### Phase 4 — 백로그 (이후)
 

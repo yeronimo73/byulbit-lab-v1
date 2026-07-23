@@ -2,7 +2,7 @@
 
 **갱신**: 2026-07-23  
 **정본 데이터**: `data/enneagram-types.json` · `data/enneagram-items.json`  
-**UI**: `tools/enneagram.html` · `tools/enneagram.js`  
+**UI**: `tools/enneagram.html` · `tools/enneagram.js` · `tools/enneagram-guide.html` (9유형 정적 안내)  
 **채점**: `js/scoring.js` → `scoreEnneagram`  
 **콘텐츠 계획**: `docs/ENNEAGRAM_CONTENT_PLAN.md`
 

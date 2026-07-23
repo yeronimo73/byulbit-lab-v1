@@ -1311,6 +1311,106 @@ a.research-agenda-item__q:hover {
   margin: 0.75rem 0 0.5rem;
 }
 .ennea-intro { margin-top: 0.25rem; }
+
+/* Enneagram static guide */
+.ennea-guide-h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 4vw, 1.75rem);
+  margin: 0 0 0.65rem;
+}
+.ennea-guide-h2 {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  margin: 0 0 0.55rem;
+  color: var(--ivory);
+}
+.ennea-guide-page .section-lead { margin-bottom: 1.25rem; }
+.ennea-guide-nav-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.ennea-guide-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.75rem;
+  font-size: 0.8rem;
+  margin: 1.25rem 0 1rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.ennea-guide-jump a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.ennea-guide-jump a:hover { color: var(--gold); }
+.ennea-guide-grid {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 0.5rem;
+}
+@media (min-width: 720px) {
+  .ennea-guide-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+}
+@media (min-width: 1000px) {
+  .ennea-guide-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.ennea-guide-card {
+  margin: 0;
+  padding: 1rem 1.1rem 1.15rem;
+  border-radius: 0.85rem;
+  border: 1px solid var(--border);
+  background: var(--surface-1);
+  border-top: 3px solid var(--violet);
+  scroll-margin-top: 4.5rem;
+}
+.ennea-guide-card[data-center="gut"] { border-top-color: #ffd84d; }
+.ennea-guide-card[data-center="heart"] { border-top-color: #e8a0b8; }
+.ennea-guide-card[data-center="head"] { border-top-color: #6ec8c8; }
+.ennea-guide-card__num {
+  margin: 0 0 0.2rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+.ennea-guide-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  margin: 0 0 0.25rem;
+  color: var(--ivory);
+}
+.ennea-guide-card__en {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--muted);
+  margin-left: 0.25rem;
+}
+.ennea-guide-card__center {
+  margin: 0 0 0.55rem;
+  font-size: 0.78rem;
+  color: var(--teal);
+}
+.ennea-guide-card__summary,
+.ennea-guide-card__mot,
+.ennea-guide-card__q {
+  margin: 0 0 0.45rem;
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: rgba(244, 242, 250, 0.9);
+  text-wrap: pretty;
+}
+.ennea-guide-card__cta {
+  margin: 0.65rem 0 0;
+  font-size: 0.82rem;
+}
+.ennea-guide-card__cta a { color: var(--gold); text-decoration: none; }
+.ennea-guide-card__cta a:hover { text-decoration: underline; }
 .disclaimer { font-size: 0.72rem; color: var(--muted); margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border); }
 
 .sign-detail-img {
